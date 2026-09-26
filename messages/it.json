@@ -1,0 +1,146 @@
+{
+  "Metadata": {
+    "title": "{brandName} | Arredi fatti a mano",
+    "description": "{brandName} crea arredi fatti a mano in cui il design senza tempo incontra un'autentica maestria artigianale.",
+    "collectionsDescription": "Scopra le nostre collezioni fatte a mano, dove il design senza tempo incontra l'artigianato.",
+    "collectionDescription": "La collezione {name}: arredi realizzati a mano nell'atelier di {brandName}.",
+    "productDescription": "{name}: arredo realizzato a mano nell'atelier di {brandName}. Richieda un preventivo per prezzi e ordini.",
+    "aboutDescription": "La storia di {brandName}, il nostro atelier e la promessa artigianale dietro ogni pezzo.",
+    "contactDescription": "Contatti {brandName} per ordini su misura, preventivi e qualsiasi domanda."
+  },
+  "Nav": {
+    "home": "Home",
+    "collections": "Collezioni",
+    "about": "Chi siamo",
+    "contact": "Contatti",
+    "skipToContent": "Vai al contenuto"
+  },
+  "LanguageSwitcher": {
+    "label": "Lingua"
+  },
+  "Home": {
+    "heroTitle": "Eleganza senza tempo, maestria artigianale",
+    "heroSubtitle": "Arredi boutique interamente fatti a mano che portano il design senza tempo negli spazi abitativi contemporanei.",
+    "heroCta": "Scopri le collezioni",
+    "collectionsTitle": "Collezioni in evidenza",
+    "craftTitle": "Maestria in ogni dettaglio",
+    "craftText": "Ogni pezzo prende forma con pazienza e maestria, in mani che conoscono il legno. Nel nostro atelier nessuna poltrona è prodotta in serie.",
+    "craftCta": "Scopri la nostra storia",
+    "productsTitle": "Prodotti in evidenza",
+    "viewDetails": "Vedi dettagli",
+    "quoteText": "Dietro ogni carezza di velluto c'è una maestria artigianale tramandata di generazione in generazione."
+  },
+  "Footer": {
+    "tagline": "Arredi dove l'eleganza senza tempo incontra l'artigianato.",
+    "quickLinks": "Link rapidi",
+    "contactTitle": "Contatti",
+    "followUs": "Seguici",
+    "rights": "Tutti i diritti riservati.",
+    "privacy": "Informativa sulla privacy",
+    "terms": "Condizioni d'uso"
+  },
+  "Collections": {
+    "title": "Collezioni",
+    "subtitle": "Ogni pezzo porta con sé una storia plasmata a mano.",
+    "empty": "In questa collezione non ci sono ancora prodotti.",
+    "noCategories": "Le nostre collezioni saranno qui a breve."
+  },
+  "Product": {
+    "specifications": "Caratteristiche",
+    "dimensions": "Dimensioni",
+    "requestQuote": "Richiedi un preventivo",
+    "backToCollection": "Torna alla collezione",
+    "materials": "Materiali",
+    "variants": "Opzioni",
+    "unitCm": "cm"
+  },
+  "About": {
+    "kicker": "La nostra storia",
+    "title": "La storia di {brandName}",
+    "storyP1": "Tutto è nato da una convinzione: un buon mobile deve durare una vita. {brandName} porta questa convinzione nelle case di oggi con maestria, pazienza e cura.",
+    "storyP2": "Nel nostro laboratorio ogni pezzo viene realizzato uno alla volta, da mani che conoscono il legno e il tessuto da anni. Nessuna poltrona, nessun tavolo è uguale a un altro, perché l'artigianato cerca il carattere, non la ripetizione perfetta.",
+    "storyP3": "Uniamo la maestria classica alla semplicità della vita moderna. Il risultato: arredi che resistono al tempo e si inseriscono con naturalezza nelle case di oggi.",
+    "craftTitle": "La nostra promessa artigianale",
+    "craftText": "Nessuna produzione in serie, nessun pezzo stampato. Ogni ordine prende vita in settimane di lavoro nelle mani dei nostri artigiani."
+  },
+  "Contact": {
+    "title": "Contatti",
+    "subtitle": "Ci scriva per domande e ordini su misura.",
+    "name": "Nome e cognome",
+    "email": "E-mail",
+    "phone": "Telefono (facoltativo)",
+    "message": "Il suo messaggio",
+    "productContext": "— vorrei ricevere maggiori informazioni",
+    "submit": "Invia",
+    "sending": "Invio in corso...",
+    "success": "Abbiamo ricevuto il suo messaggio: le risponderemo a breve.",
+    "error": "Qualcosa è andato storto, riprovi.",
+    "infoTitle": "Contattaci",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Buongiorno, potrei avere alcune informazioni?",
+    "followUs": "Seguici",
+    "addressTitle": "Il nostro showroom",
+    "getDirections": "Indicazioni stradali",
+    "rateLimited": "Ha inviato troppi messaggi. Riprovi più tardi.",
+    "consent": "Inviando questo modulo confermo di aver letto l'<link>Informativa sulla privacy</link> e acconsento al trattamento dei miei dati personali per rispondere alla mia richiesta."
+  },
+  "Error": {
+    "notFoundTitle": "Pagina non trovata",
+    "notFoundText": "La pagina che sta cercando potrebbe essere stata spostata o non essere mai esistita. Scopra invece le nostre collezioni.",
+    "backHome": "Torna alla home",
+    "errorTitle": "Qualcosa è andato storto",
+    "errorText": "Si è verificato un errore imprevisto. Riprovi.",
+    "errorCode": "Codice di errore: {code}",
+    "retry": "Riprova"
+  },
+  "Privacy": {
+    "title": "Informativa sulla privacy",
+    "lastUpdated": "Ultimo aggiornamento: {date}",
+    "intro": "In {brandName} prendiamo sul serio la protezione dei suoi dati personali. Questa informativa spiega quali dati trattiamo, perché li trattiamo e per quanto tempo li conserviamo, in conformità con la legge turca n. 6698 sulla protezione dei dati personali (KVKK).",
+    "controllerTitle": "1. Titolare del trattamento",
+    "controllerText": "Il titolare del trattamento è {legalName}. Può inviare qualsiasi domanda o richiesta relativa a questa informativa a {email}.",
+    "dataTitle": "2. Dati personali trattati",
+    "dataText": "Quando compila il modulo di contatto o di preventivo sul nostro sito, riceviamo il suo nome, il suo indirizzo e-mail, il suo numero di telefono (se indicato) e il contenuto del suo messaggio. Per prevenire abusi del modulo, il suo indirizzo IP non viene mai conservato in chiaro, ma solo come hash irreversibile.",
+    "purposeTitle": "3. Finalità del trattamento",
+    "purposeText": "I suoi dati sono trattati esclusivamente per rispondere alla sua richiesta, preparare un preventivo, gestire il processo d'ordine e prevenire abusi del modulo. Non inviamo e-mail promozionali senza il suo consenso.",
+    "legalBasisTitle": "4. Base giuridica",
+    "legalBasisText": "Il trattamento si basa sull'art. 5/2-c della KVKK (direttamente connesso alla conclusione o all'esecuzione di un contratto) e sull'art. 5/2-f (legittimi interessi del titolare del trattamento).",
+    "sharingTitle": "5. Comunicazione dei dati",
+    "sharingText": "I suoi dati personali non vengono mai venduti a terzi. Solo i nostri fornitori di hosting, database ed e-mail trattano i dati per nostro conto e secondo le nostre istruzioni, affinché il sito possa funzionare. I dati possono essere comunicati alle autorità competenti quando richiesto dalla legge.",
+    "retentionTitle": "6. Periodo di conservazione",
+    "retentionText": "I dati inviati tramite il modulo sono conservati per un massimo di 3 anni dopo la chiusura della sua richiesta, dopodiché vengono cancellati o resi anonimi.",
+    "cookiesTitle": "7. Cookie",
+    "cookiesText": "Il nostro sito non utilizza cookie pubblicitari o di tracciamento. Sono utilizzati solo cookie strettamente necessari, per ricordare la lingua scelta e mantenere attiva la sessione del pannello di amministrazione.",
+    "rightsTitle": "8. I suoi diritti",
+    "rightsText": "Ai sensi dell'art. 11 della KVKK ha il diritto di sapere se i suoi dati personali sono trattati, di chiedere informazioni al riguardo, di chiederne la rettifica, la cancellazione o la distruzione e di opporsi al trattamento. Invii le sue richieste a {email}; rispondiamo entro 30 giorni al massimo."
+  },
+  "Terms": {
+    "title": "Condizioni d'uso",
+    "lastUpdated": "Ultimo aggiornamento: {date}",
+    "intro": "Visitando questo sito si considerano accettate le condizioni riportate di seguito. Se non le accetta, la preghiamo di non utilizzare il sito.",
+    "scopeTitle": "1. Finalità del sito",
+    "scopeText": "Il sito di {brandName} è un catalogo di prodotti; tramite esso non si effettuano vendite dirette né si accettano pagamenti online. Le richieste sui prodotti vengono inviate tramite il modulo di contatto e ciascuna viene valutata singolarmente.",
+    "ipTitle": "2. Proprietà intellettuale",
+    "ipText": "Tutte le immagini, i progetti, i testi e gli elementi del marchio presenti sul sito appartengono a {legalName}. Non possono essere copiati, riprodotti, utilizzati a fini commerciali o ripubblicati altrove senza autorizzazione scritta.",
+    "productTitle": "3. Informazioni sui prodotti",
+    "productText": "Poiché ogni pezzo è realizzato a mano, possono esserci lievi variazioni nella venatura del legno, nella tonalità del colore e nelle dimensioni. Non si tratta di un difetto, ma di una conseguenza naturale della lavorazione artigianale. Le immagini del sito sono indicative.",
+    "priceTitle": "4. Prezzi e preventivi",
+    "priceText": "I prezzi indicati sul sito hanno valore puramente informativo e non costituiscono un'offerta di vendita vincolante. Il prezzo aggiornato, le opzioni dei materiali e i tempi di realizzazione le vengono confermati in un preventivo scritto.",
+    "liabilityTitle": "5. Limitazione di responsabilità",
+    "liabilityText": "Ci impegniamo a mantenere le informazioni di questo sito corrette e aggiornate; tuttavia non possiamo essere ritenuti responsabili di danni indiretti derivanti da errori di battitura o dall'indisponibilità temporanea del sito.",
+    "linksTitle": "6. Link esterni",
+    "linksText": "Il sito può contenere link a terzi, come i nostri account sui social network e un servizio di mappe. {brandName} non è responsabile dei contenuti né delle pratiche sulla privacy di tali siti.",
+    "changesTitle": "7. Modifiche",
+    "changesText": "Queste condizioni possono essere aggiornate senza preavviso. La versione in vigore è sempre pubblicata in questa pagina.",
+    "lawTitle": "8. Legge applicabile",
+    "lawText": "Queste condizioni sono regolate dalle leggi della Repubblica di Turchia. Per qualsiasi controversia sono competenti i tribunali e gli uffici esecutivi della città di {courtCity}.",
+    "contactTitle": "9. Contatti",
+    "contactText": "Per qualsiasi domanda può scriverci all'indirizzo {email}."
+  },
+  "ComingSoon": {
+    "title": "Molto Presto",
+    "metaTitle": "{brandName} — Molto Presto",
+    "metaDescription": "Arredi fatti a mano. {brandName} apre molto presto le sue porte: segua il nostro percorso su Instagram.",
+    "instagram": "Seguici su Instagram"
+  }
+}

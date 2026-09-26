@@ -1,0 +1,146 @@
+{
+  "Metadata": {
+    "title": "{brandName} | El Yapımı Mobilya",
+    "description": "{brandName}, zamansız tasarımı gerçek ustalıkla buluşturan el yapımı mobilyalar üretir.",
+    "collectionsDescription": "Zamansız tasarımı el işçiliğiyle buluşturan koleksiyonlarımızı keşfedin.",
+    "collectionDescription": "{name} koleksiyonu: {brandName} atölyesinde el işçiliğiyle üretilen mobilyalar.",
+    "productDescription": "{name}: {brandName} atölyesinde el işçiliğiyle üretilen mobilya. Fiyat ve sipariş için teklif alın.",
+    "aboutDescription": "{brandName} hakkında: hikâyemiz, atölyemiz ve her parçanın arkasındaki el işçiliği sözümüz.",
+    "contactDescription": "Özel siparişler, teklif talepleri ve sorularınız için {brandName} ile iletişime geçin."
+  },
+  "Nav": {
+    "home": "Ana Sayfa",
+    "collections": "Koleksiyonlar",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "skipToContent": "İçeriğe geç"
+  },
+  "LanguageSwitcher": {
+    "label": "Dil"
+  },
+  "Home": {
+    "heroTitle": "Zamansız Zarafet, El İşçiliği Ustalık",
+    "heroSubtitle": "Zamansız tasarımı modern yaşam alanlarına taşıyan, tamamen el işçiliği butik mobilya.",
+    "heroCta": "Koleksiyonları Keşfet",
+    "collectionsTitle": "Öne Çıkan Koleksiyonlar",
+    "craftTitle": "Her Detayda El İşçiliği",
+    "craftText": "Her parça, ahşabı tanıyan ellerde, sabırla ve ustalıkla şekilleniyor. Atölyemizde hiçbir koltuk seri üretim değildir.",
+    "craftCta": "Hikayemizi Keşfet",
+    "productsTitle": "Öne Çıkan Ürünler",
+    "viewDetails": "Detayları Gör",
+    "quoteText": "Kadife dokunun altında, nesilden nesile aktarılan bir zanaat ustalığı yatıyor."
+  },
+  "Footer": {
+    "tagline": "Zamansız zarafeti el işçiliğiyle buluşturan mobilyalar.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "contactTitle": "İletişim",
+    "followUs": "Bizi Takip Edin",
+    "rights": "Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Şartları"
+  },
+  "Collections": {
+    "title": "Koleksiyonlar",
+    "subtitle": "Her parça, elde şekillenen bir hikaye taşır.",
+    "empty": "Bu kategoride henüz ürün yok.",
+    "noCategories": "Koleksiyonlar yakında burada olacak."
+  },
+  "Product": {
+    "specifications": "Özellikler",
+    "dimensions": "Boyutlar",
+    "requestQuote": "Teklif Al",
+    "backToCollection": "Koleksiyona Dön",
+    "materials": "Malzemeler",
+    "variants": "Seçenekler",
+    "unitCm": "cm"
+  },
+  "About": {
+    "kicker": "Hikayemiz",
+    "title": "{brandName} Hikâyesi",
+    "storyP1": "Her şey, iyi bir mobilyanın bir ömür boyu yaşaması gerektiği inancıyla başladı. {brandName}, bu inancı ustalık, sabır ve özenle bugünün evlerine taşıyor.",
+    "storyP2": "Atölyemizde her parça, ahşabı ve kumaşı yıllarca tanımış ellerde tek tek şekilleniyor. Hiçbir koltuk, hiçbir sehpa bir diğerinin aynısı değil — çünkü el işçiliği, mükemmel tekrarı değil, karakteri hedefler.",
+    "storyP3": "Klasik ustalığı modern yaşamın sadeliğiyle buluşturuyoruz. Sonuç: hem zamana meydan okuyan hem de bugünün evlerinde nefes alan mobilyalar.",
+    "craftTitle": "El İşçiliği Sözümüz",
+    "craftText": "Seri üretim yok, kalıptan çıkma parça yok. Her sipariş, ustalarımızın elinde haftalar süren bir emekle hayat buluyor."
+  },
+  "Contact": {
+    "title": "İletişim",
+    "subtitle": "Sorularınız ve özel siparişleriniz için bize ulaşın.",
+    "name": "Ad Soyad",
+    "email": "E-posta",
+    "phone": "Telefon (opsiyonel)",
+    "message": "Mesajınız",
+    "productContext": "hakkında bilgi almak istiyorum",
+    "submit": "Gönder",
+    "sending": "Gönderiliyor...",
+    "success": "Mesajınız alındı, en kısa sürede size dönüş yapacağız.",
+    "error": "Bir hata oluştu, lütfen tekrar deneyin.",
+    "infoTitle": "Bize Ulaşın",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Merhaba, bilgi alabilir miyim?",
+    "followUs": "Bizi Takip Edin",
+    "addressTitle": "Mağazamız",
+    "getDirections": "Yol Tarifi Al",
+    "rateLimited": "Çok fazla mesaj gönderdiniz. Lütfen bir süre sonra tekrar deneyin.",
+    "consent": "Formu göndererek <link>Gizlilik Politikası</link>'nı okuduğumu ve kişisel verilerimin talebime yanıt verilmesi amacıyla işlenmesini kabul ediyorum."
+  },
+  "Error": {
+    "notFoundTitle": "Sayfa bulunamadı",
+    "notFoundText": "Aradığınız sayfa taşınmış ya da hiç var olmamış olabilir. Koleksiyonlarımıza göz atabilirsiniz.",
+    "backHome": "Ana Sayfaya Dön",
+    "errorTitle": "Bir şeyler ters gitti",
+    "errorText": "Beklenmedik bir hata oluştu. Lütfen tekrar deneyin.",
+    "errorCode": "Hata kodu: {code}",
+    "retry": "Tekrar Dene"
+  },
+  "Privacy": {
+    "title": "Gizlilik Politikası ve KVKK Aydınlatma Metni",
+    "lastUpdated": "Son güncelleme: {date}",
+    "intro": "{brandName} olarak kişisel verilerinizin güvenliğine önem veriyoruz. Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında hangi verileri, neden ve ne kadar süreyle işlediğimizi açıklar.",
+    "controllerTitle": "1. Veri Sorumlusu",
+    "controllerText": "Veri sorumlusu: {legalName}. Bu metinle ilgili her türlü soru ve talebinizi {email} adresine iletebilirsiniz.",
+    "dataTitle": "2. İşlenen Kişisel Veriler",
+    "dataText": "Sitemizdeki iletişim/teklif formunu doldurduğunuzda ad soyad, e-posta adresi, varsa telefon numarası ve mesajınızın içeriği tarafımıza iletilir. Ayrıca formun kötüye kullanımını önlemek amacıyla IP adresiniz ham haliyle değil, geri döndürülemez biçimde şifrelenmiş (hash'lenmiş) olarak saklanır.",
+    "purposeTitle": "3. İşleme Amaçları",
+    "purposeText": "Verileriniz yalnızca talebinize yanıt vermek, teklif hazırlamak, sipariş sürecini yürütmek ve form kötüye kullanımını engellemek için işlenir. Ayrıca onayınız olmadan pazarlama amaçlı e-posta gönderilmez.",
+    "legalBasisTitle": "4. Hukuki Sebep",
+    "legalBasisText": "İşleme faaliyeti, KVKK m.5/2-c (sözleşmenin kurulması veya ifasıyla doğrudan ilgili olma) ve m.5/2-f (veri sorumlusunun meşru menfaati) hükümlerine dayanmaktadır.",
+    "sharingTitle": "5. Aktarım",
+    "sharingText": "Kişisel verileriniz üçüncü kişilere satılmaz. Yalnızca sitenin çalışması için kullandığımız barındırma, veritabanı ve e-posta sağlayıcılarımız verileri bizim adımıza ve talimatımız doğrultusunda işler. Yasal bir zorunluluk halinde yetkili kamu kurum ve kuruluşlarıyla paylaşılabilir.",
+    "retentionTitle": "6. Saklama Süresi",
+    "retentionText": "Form üzerinden ilettiğiniz veriler, talebinizin sonuçlanmasından itibaren en fazla 3 yıl saklanır; sürenin sonunda silinir veya anonim hale getirilir.",
+    "cookiesTitle": "7. Çerezler",
+    "cookiesText": "Sitemiz reklam veya takip çerezi kullanmaz. Yalnızca dil tercihinizi hatırlamak ve yönetim paneline giriş oturumunu sürdürmek için zorunlu çerezler kullanılır.",
+    "rightsTitle": "8. Haklarınız",
+    "rightsText": "KVKK m.11 uyarınca kişisel verilerinizin işlenip işlenmediğini öğrenme, buna ilişkin bilgi talep etme, düzeltilmesini, silinmesini veya yok edilmesini isteme ve işlemeye itiraz etme haklarına sahipsiniz. Taleplerinizi {email} adresine iletebilirsiniz; en geç 30 gün içinde yanıt veririz."
+  },
+  "Terms": {
+    "title": "Kullanım Şartları",
+    "lastUpdated": "Son güncelleme: {date}",
+    "intro": "Bu siteyi ziyaret ederek aşağıdaki şartları kabul etmiş sayılırsınız. Şartları kabul etmiyorsanız lütfen siteyi kullanmayınız.",
+    "scopeTitle": "1. Sitenin Kapsamı",
+    "scopeText": "{brandName} web sitesi bir ürün kataloğudur; site üzerinden doğrudan satış yapılmaz ve çevrim içi ödeme alınmaz. Ürünlerle ilgili talepler iletişim formu aracılığıyla iletilir ve her talep ayrı ayrı değerlendirilir.",
+    "ipTitle": "2. Fikri Mülkiyet",
+    "ipText": "Sitedeki tüm görseller, tasarımlar, metinler ve marka unsurları {legalName} şirketine aittir. Yazılı izin olmaksızın kopyalanamaz, çoğaltılamaz, ticari amaçla kullanılamaz veya başka bir mecrada yayımlanamaz.",
+    "productTitle": "3. Ürün Bilgileri",
+    "productText": "Tüm ürünlerimiz el işçiliğiyle üretildiğinden ahşap dokusunda, renk tonunda ve ölçülerde küçük farklılıklar olabilir; bu bir kusur değil, el işçiliğinin doğal sonucudur. Sitedeki görseller temsilidir.",
+    "priceTitle": "4. Fiyat ve Teklifler",
+    "priceText": "Sitede yer alan fiyatlar bilgilendirme amaçlıdır ve bağlayıcı bir satış teklifi oluşturmaz. Güncel fiyat, malzeme seçimi ve teslim süresi tarafınıza yazılı teklifle bildirilir.",
+    "liabilityTitle": "5. Sorumluluğun Sınırı",
+    "liabilityText": "Sitedeki bilgilerin güncel ve doğru olması için özen gösteririz; ancak dizgi hatalarından veya sitenin geçici olarak erişilemez olmasından doğabilecek dolaylı zararlardan sorumlu tutulamayız.",
+    "linksTitle": "6. Dış Bağlantılar",
+    "linksText": "Site, sosyal medya hesaplarımız ve harita servisi gibi üçüncü taraf bağlantıları içerebilir. Bu sitelerin içeriğinden ve gizlilik uygulamalarından {brandName} sorumlu değildir.",
+    "changesTitle": "7. Değişiklikler",
+    "changesText": "Bu şartlar önceden haber verilmeksizin güncellenebilir. Güncel sürüm her zaman bu sayfada yayımlanır.",
+    "lawTitle": "8. Uygulanacak Hukuk",
+    "lawText": "Bu şartlar Türkiye Cumhuriyeti kanunlarına tabidir. Doğabilecek uyuşmazlıklarda {courtCity} mahkemeleri ve icra daireleri yetkilidir.",
+    "contactTitle": "9. İletişim",
+    "contactText": "Sorularınız için {email} adresinden bize ulaşabilirsiniz."
+  },
+  "ComingSoon": {
+    "title": "Çok Yakında",
+    "metaTitle": "{brandName} — Çok Yakında",
+    "metaDescription": "El yapımı mobilyalar. {brandName} çok yakında kapılarını açıyor; gelişmeleri Instagram'dan takip edin.",
+    "instagram": "Instagram'da takip edin"
+  }
+}

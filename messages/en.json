@@ -1,0 +1,146 @@
+{
+  "Metadata": {
+    "title": "{brandName} | Handcrafted Furniture",
+    "description": "{brandName} creates handcrafted furniture where timeless design meets true craftsmanship.",
+    "collectionsDescription": "Discover our handcrafted collections, where timeless design meets craftsmanship.",
+    "collectionDescription": "The {name} collection: furniture handcrafted in the {brandName} workshop.",
+    "productDescription": "{name}: furniture handcrafted in the {brandName} workshop. Request a quote for pricing and orders.",
+    "aboutDescription": "About {brandName}: our story, our workshop and the handcrafted promise behind every piece.",
+    "contactDescription": "Get in touch with {brandName} for bespoke orders, quotes and any questions."
+  },
+  "Nav": {
+    "home": "Home",
+    "collections": "Collections",
+    "about": "About",
+    "contact": "Contact",
+    "skipToContent": "Skip to content"
+  },
+  "LanguageSwitcher": {
+    "label": "Language"
+  },
+  "Home": {
+    "heroTitle": "Timeless Elegance, Handcrafted Mastery",
+    "heroSubtitle": "Boutique furniture, entirely handcrafted, bringing timeless design into modern living spaces.",
+    "heroCta": "Discover the Collections",
+    "collectionsTitle": "Featured Collections",
+    "craftTitle": "Craftsmanship in Every Detail",
+    "craftText": "Every piece is shaped by hands that know wood, with patience and mastery. In our workshop, no armchair is mass-produced.",
+    "craftCta": "Discover Our Story",
+    "productsTitle": "Featured Products",
+    "viewDetails": "View Details",
+    "quoteText": "Beneath every velvet touch lies a mastery of craft, passed down through generations."
+  },
+  "Footer": {
+    "tagline": "Furniture where timeless elegance meets handcraft.",
+    "quickLinks": "Quick Links",
+    "contactTitle": "Contact",
+    "followUs": "Follow Us",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "Collections": {
+    "title": "Collections",
+    "subtitle": "Every piece carries a story shaped by hand.",
+    "empty": "No products in this collection yet.",
+    "noCategories": "Collections will be here soon."
+  },
+  "Product": {
+    "specifications": "Specifications",
+    "dimensions": "Dimensions",
+    "requestQuote": "Request a Quote",
+    "backToCollection": "Back to Collection",
+    "materials": "Materials",
+    "variants": "Options",
+    "unitCm": "cm"
+  },
+  "About": {
+    "kicker": "Our Story",
+    "title": "The {brandName} Story",
+    "storyP1": "It all began with a belief: good furniture should last a lifetime. {brandName} carries that belief into today's homes with skill, patience and care.",
+    "storyP2": "In our workshop, every piece is shaped one at a time, by hands that have known wood and fabric for years. No armchair, no table is identical to another — because handcraft aims for character, not perfect repetition.",
+    "storyP3": "We bring classic craftsmanship together with the simplicity of modern living. The result: furniture that stands the test of time and feels at home in today's interiors.",
+    "craftTitle": "Our Craft Promise",
+    "craftText": "No mass production, no molded pieces. Every order comes to life through weeks of work in the hands of our artisans."
+  },
+  "Contact": {
+    "title": "Contact",
+    "subtitle": "Reach out for questions and bespoke commissions.",
+    "name": "Full Name",
+    "email": "Email",
+    "phone": "Phone (optional)",
+    "message": "Your Message",
+    "productContext": "I'd like more information about",
+    "submit": "Send",
+    "sending": "Sending...",
+    "success": "Your message has been received — we'll get back to you shortly.",
+    "error": "Something went wrong, please try again.",
+    "infoTitle": "Get in Touch",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Hello, could I get some information?",
+    "followUs": "Follow Us",
+    "addressTitle": "Our Showroom",
+    "getDirections": "Get Directions",
+    "rateLimited": "You've sent too many messages. Please try again later.",
+    "consent": "By submitting this form I confirm that I have read the <link>Privacy Policy</link> and consent to my personal data being processed in order to answer my enquiry."
+  },
+  "Error": {
+    "notFoundTitle": "Page not found",
+    "notFoundText": "The page you are looking for may have moved or never existed. Browse our collections instead.",
+    "backHome": "Back to Home",
+    "errorTitle": "Something went wrong",
+    "errorText": "An unexpected error occurred. Please try again.",
+    "errorCode": "Error code: {code}",
+    "retry": "Try Again"
+  },
+  "Privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: {date}",
+    "intro": "At {brandName} we take the protection of your personal data seriously. This notice explains which data we process, why we process it and how long we keep it, in line with the Turkish Personal Data Protection Law no. 6698 (KVKK).",
+    "controllerTitle": "1. Data Controller",
+    "controllerText": "The data controller is {legalName}. You can send any question or request regarding this notice to {email}.",
+    "dataTitle": "2. Personal Data We Process",
+    "dataText": "When you complete the contact or quote form on our site, we receive your name, e-mail address, phone number (if provided) and the content of your message. To prevent abuse of the form, your IP address is never stored in raw form — only as an irreversible hash.",
+    "purposeTitle": "3. Purposes of Processing",
+    "purposeText": "Your data is processed solely to answer your enquiry, prepare a quote, handle the order process and prevent form abuse. We do not send marketing e-mails without your consent.",
+    "legalBasisTitle": "4. Legal Basis",
+    "legalBasisText": "Processing is based on KVKK art. 5/2-c (directly related to the conclusion or performance of a contract) and art. 5/2-f (legitimate interests of the data controller).",
+    "sharingTitle": "5. Sharing",
+    "sharingText": "Your personal data is never sold to third parties. Only our hosting, database and e-mail providers process the data on our behalf and on our instructions so the site can operate. Data may be shared with competent public authorities where legally required.",
+    "retentionTitle": "6. Retention Period",
+    "retentionText": "Data submitted through the form is kept for a maximum of 3 years after your enquiry is resolved, after which it is deleted or anonymised.",
+    "cookiesTitle": "7. Cookies",
+    "cookiesText": "Our site uses no advertising or tracking cookies. Only strictly necessary cookies are used, to remember your language preference and to keep the admin panel session signed in.",
+    "rightsTitle": "8. Your Rights",
+    "rightsText": "Under KVKK art. 11 you have the right to learn whether your personal data is processed, to request information about it, to request its correction, deletion or destruction, and to object to processing. Send your requests to {email}; we respond within 30 days at the latest."
+  },
+  "Terms": {
+    "title": "Terms of Use",
+    "lastUpdated": "Last updated: {date}",
+    "intro": "By visiting this site you are deemed to have accepted the terms below. If you do not accept them, please do not use the site.",
+    "scopeTitle": "1. Scope of the Site",
+    "scopeText": "The {brandName} website is a product catalogue; no direct sales are made and no online payments are taken through it. Product enquiries are submitted via the contact form and each enquiry is assessed individually.",
+    "ipTitle": "2. Intellectual Property",
+    "ipText": "All images, designs, texts and brand elements on the site belong to {legalName}. They may not be copied, reproduced, used commercially or republished elsewhere without written permission.",
+    "productTitle": "3. Product Information",
+    "productText": "Because every piece is handcrafted, there may be slight variations in wood grain, colour tone and dimensions. This is not a defect but a natural result of handcraft. Images on the site are representative.",
+    "priceTitle": "4. Prices and Quotes",
+    "priceText": "Prices shown on the site are for information only and do not constitute a binding offer of sale. The current price, material options and lead time are confirmed to you in a written quote.",
+    "liabilityTitle": "5. Limitation of Liability",
+    "liabilityText": "We take care to keep the information on this site accurate and up to date; however we cannot be held liable for indirect damages arising from typographical errors or from the site being temporarily unavailable.",
+    "linksTitle": "6. External Links",
+    "linksText": "The site may contain third-party links such as our social media accounts and a map service. {brandName} is not responsible for the content or privacy practices of those sites.",
+    "changesTitle": "7. Changes",
+    "changesText": "These terms may be updated without prior notice. The current version is always published on this page.",
+    "lawTitle": "8. Governing Law",
+    "lawText": "These terms are governed by the laws of the Republic of Türkiye. The courts and enforcement offices of {courtCity} have jurisdiction over any dispute.",
+    "contactTitle": "9. Contact",
+    "contactText": "For any questions you can reach us at {email}."
+  },
+  "ComingSoon": {
+    "title": "Coming Soon",
+    "metaTitle": "{brandName} — Coming Soon",
+    "metaDescription": "Handcrafted furniture. {brandName} opens its doors soon — follow our journey on Instagram.",
+    "instagram": "Follow us on Instagram"
+  }
+}

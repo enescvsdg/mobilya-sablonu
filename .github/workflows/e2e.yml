@@ -1,0 +1,93 @@
+name: E2E Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  # Chrome/Android ve iPhone Safari ayrı işlerde aynı anda çalışır; her
+  # işin kendi veritabanı vardır.
+  test:
+    name: e2e (${{ matrix.browsers }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        browsers: [chromium, webkit]
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: sablon
+          POSTGRES_PASSWORD: sablon_dev_password
+          POSTGRES_DB: mobilya
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      DATABASE_URL: postgresql://sablon:sablon_dev_password@localhost:5432/mobilya?schema=public
+      AUTH_SECRET: ci-test-secret-do-not-use-in-production
+      ADMIN_EMAIL: admin@example.com
+      ADMIN_PASSWORD: SablonAdmin2026!
+      NEXT_PUBLIC_SITE_URL: http://localhost:3100
+      E2E_BROWSERS: ${{ matrix.browsers }}
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Seed betiği üretilmiş Prisma istemcisini kullanır (src/generated,
+      # repoda yok); `pnpm build` onu ancak testler başlarken üretir.
+      - name: Generate Prisma client
+        run: pnpm exec prisma generate
+
+      - name: Apply migrations
+        run: pnpm db:migrate:deploy
+
+      - name: Seed database
+        run: pnpm db:seed
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps ${{ matrix.browsers }}
+
+      # Panel admin.localhost'ta açılır. Chromium *.localhost'u kendisi
+      # çözer; WebKit sistemin çözümleyicisine sorar.
+      - name: Resolve admin.localhost
+        run: echo "127.0.0.1 admin.localhost" | sudo tee -a /etc/hosts
+
+      - name: Run e2e tests
+        run: pnpm test:e2e
+
+      - name: Upload Playwright report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-report-${{ matrix.browsers }}
+          path: playwright-report/
+          retention-days: 14
+
+  # Tek bir "e2e" sonucu: iki iş de geçtiyse yeşil.
+  e2e:
+    needs: test
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check test jobs
+        run: test "${{ needs.test.result }}" = "success"

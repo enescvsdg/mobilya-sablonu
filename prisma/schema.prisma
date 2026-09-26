@@ -1,0 +1,366 @@
+// Mobilya kataloğu — Prisma Schema
+// https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─────────────────────────────────────────────
+// i18n
+// ─────────────────────────────────────────────
+
+model Language {
+  code        String   @id // ISO 639-1, e.g. "tr", "en", "ru"
+  name        String // e.g. "Türkçe"
+  nativeName  String
+  isActive    Boolean  @default(true) // "Yayında": ziyaretçiye açık
+  /// "Hazırlık": sitede kapalı, panelde çeviri alanları açık.
+  isPreparing Boolean  @default(false)
+  isDefault   Boolean  @default(false)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  categoryTranslations    CategoryTranslation[]
+  productTranslations     ProductTranslation[]
+  siteContentTranslations SiteContentTranslation[]
+  variantTranslations     ProductVariantTranslation[]
+  imageTranslations       ProductImageTranslation[]
+  inquiries               Inquiry[]
+
+  @@map("languages")
+}
+
+// ─────────────────────────────────────────────
+// Admin
+// ─────────────────────────────────────────────
+
+enum AdminRole {
+  SUPER_ADMIN
+  EDITOR
+}
+
+model AdminUser {
+  id             String     @id @default(cuid())
+  email          String     @unique
+  passwordHash   String
+  name           String
+  /// SUPER_ADMIN her şeye erişir; EDITOR (çalışan) yetkilerini bağlı
+  /// rolden (staffRole) alır.
+  role           AdminRole  @default(EDITOR)
+  staffRoleId    String?
+  staffRole      StaffRole? @relation(fields: [staffRoleId], references: [id], onDelete: Restrict)
+  isActive       Boolean    @default(true)
+  /// Davetle açılan hesap, kişi şifresini belirleyince etkinleşir.
+  activatedAt    DateTime?
+  /// Şifre değişince artar; eski cihazlardaki oturumlar geçersiz olur.
+  sessionVersion Int        @default(0)
+  lastLoginAt    DateTime?
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+
+  authTokens AuthToken[]
+  activities ActivityLog[]
+
+  @@map("admin_users")
+}
+
+/// Çalışan rolleri: hangi panel bölümünü görebileceği ya da
+/// düzenleyebileceği (src/lib/permissions.ts).
+model StaffRole {
+  id          String      @id @default(cuid())
+  name        String      @unique
+  /// Bölüm → "none" | "view" | "edit"
+  permissions Json
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  users       AdminUser[]
+
+  @@map("staff_roles")
+}
+
+enum AuthTokenType {
+  PASSWORD_RESET
+  PASSWORD_CHANGE
+  INVITE
+}
+
+/// E-postayla gönderilen tek kullanımlık bağlantılar ve kodlar. Kendileri
+/// değil yalnızca HMAC özetleri saklanır (src/lib/auth-tokens.ts).
+model AuthToken {
+  id              String        @id @default(cuid())
+  userId          String
+  user            AdminUser     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type            AuthTokenType
+  tokenHash       String
+  /// Şifre değişikliğinde, kod onaylanınca geçerli olacak yeni şifrenin özeti.
+  newPasswordHash String?
+  attempts        Int           @default(0)
+  expiresAt       DateTime
+  usedAt          DateTime?
+  createdAt       DateTime      @default(now())
+
+  @@index([tokenHash])
+  @@index([userId, type, createdAt])
+  @@map("auth_tokens")
+}
+
+/// Panelde kim, ne zaman, ne yaptı.
+model ActivityLog {
+  id        String     @id @default(cuid())
+  userId    String?
+  user      AdminUser? @relation(fields: [userId], references: [id], onDelete: SetNull)
+  /// Kullanıcı silinse de kaydın kime ait olduğu okunabilsin diye.
+  userName  String
+  /// Makine için kısa ad, ör. "product.update".
+  action    String
+  /// İnsan için açıklama, ör. "Ürünü güncelledi: Milano Koltuk".
+  summary   String
+  createdAt DateTime   @default(now())
+
+  @@index([createdAt])
+  @@index([userId, createdAt])
+  @@map("activity_logs")
+}
+
+/// Hatalı panel girişleri. Şifre tahmin saldırılarını yavaşlatmak için
+/// kısa süre tutulur (src/lib/login-throttle.ts); başarılı girişte ve bir
+/// günden eskiyse silinir.
+model LoginAttempt {
+  id        String   @id @default(cuid())
+  email     String
+  ipHash    String?
+  createdAt DateTime @default(now())
+
+  @@index([email, createdAt])
+  @@index([ipHash, createdAt])
+  @@map("login_attempts")
+}
+
+// ─────────────────────────────────────────────
+// Catalog
+// ─────────────────────────────────────────────
+
+model Category {
+  id         String     @id @default(cuid())
+  parentId   String?
+  parent     Category?  @relation("CategoryToSubcategory", fields: [parentId], references: [id], onDelete: SetNull)
+  children   Category[] @relation("CategoryToSubcategory")
+  coverImage String?
+  sortOrder  Int        @default(0)
+  isActive   Boolean    @default(true)
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+
+  translations CategoryTranslation[]
+  products     Product[]
+
+  @@map("categories")
+}
+
+model CategoryTranslation {
+  id             String   @id @default(cuid())
+  categoryId     String
+  category       Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  languageCode   String
+  language       Language @relation(fields: [languageCode], references: [code], onDelete: Cascade)
+  name           String
+  slug           String
+  description    String?
+  seoTitle       String?
+  seoDescription String?
+
+  @@unique([categoryId, languageCode])
+  @@unique([languageCode, slug])
+  @@map("category_translations")
+}
+
+model Product {
+  id         String   @id @default(cuid())
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  sku        String   @unique
+  widthCm    Decimal? @db.Decimal(6, 1)
+  heightCm   Decimal? @db.Decimal(6, 1)
+  depthCm    Decimal? @db.Decimal(6, 1)
+  isFeatured Boolean  @default(false)
+  isActive   Boolean  @default(true)
+  sortOrder  Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  translations ProductTranslation[]
+  images       ProductImage[]
+  variants     ProductVariant[]
+  inquiries    Inquiry[]
+
+  @@map("products")
+}
+
+model ProductTranslation {
+  id               String   @id @default(cuid())
+  productId        String
+  product          Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  languageCode     String
+  language         Language @relation(fields: [languageCode], references: [code], onDelete: Cascade)
+  name             String
+  slug             String
+  shortDescription String?
+  description      String?
+  materialsText    String?
+  seoTitle         String?
+  seoDescription   String?
+
+  @@unique([productId, languageCode])
+  @@unique([languageCode, slug])
+  @@map("product_translations")
+}
+
+model ProductImage {
+  id        String   @id @default(cuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url       String
+  /// Türkçe alt metin; diğer diller ProductImageTranslation'da.
+  altText   String?
+  sortOrder Int      @default(0)
+  isPrimary Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  translations ProductImageTranslation[]
+
+  @@map("product_images")
+}
+
+model ProductVariant {
+  id        String  @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  /// Türkçe ad (ör. "Lacivert Kadife"); diğer diller ProductVariantTranslation'da.
+  name      String
+  colorHex  String?
+  imageUrl  String?
+  sortOrder Int     @default(0)
+
+  translations ProductVariantTranslation[]
+
+  @@map("product_variants")
+}
+
+/// Varyant adının Türkçe dışındaki dillerdeki karşılığı.
+model ProductVariantTranslation {
+  id           String         @id @default(cuid())
+  variantId    String
+  variant      ProductVariant @relation(fields: [variantId], references: [id], onDelete: Cascade)
+  languageCode String
+  language     Language       @relation(fields: [languageCode], references: [code], onDelete: Cascade)
+  name         String
+
+  @@unique([variantId, languageCode])
+  @@map("product_variant_translations")
+}
+
+/// Görsel alt metninin Türkçe dışındaki dillerdeki karşılığı.
+model ProductImageTranslation {
+  id           String       @id @default(cuid())
+  imageId      String
+  image        ProductImage @relation(fields: [imageId], references: [id], onDelete: Cascade)
+  languageCode String
+  language     Language     @relation(fields: [languageCode], references: [code], onDelete: Cascade)
+  altText      String
+
+  @@unique([imageId, languageCode])
+  @@map("product_image_translations")
+}
+
+// ─────────────────────────────────────────────
+// Inquiries (teklif / iletişim formu)
+// ─────────────────────────────────────────────
+
+enum InquiryStatus {
+  NEW
+  CONTACTED
+  CLOSED
+}
+
+model Inquiry {
+  id           String        @id @default(cuid())
+  name         String
+  email        String
+  phone        String?
+  message      String
+  productId    String?
+  product      Product?      @relation(fields: [productId], references: [id], onDelete: SetNull)
+  languageCode String
+  language     Language      @relation(fields: [languageCode], references: [code], onDelete: Restrict)
+  status       InquiryStatus @default(NEW)
+  // Spam/rate limit içindir; ham IP değil, tuzlanmış hash saklanır (KVKK).
+  ipHash       String?
+  createdAt    DateTime      @default(now())
+
+  @@index([ipHash, createdAt])
+  @@map("inquiries")
+}
+
+// ─────────────────────────────────────────────
+// Site Content (Ana Sayfa hero, Hakkımızda vb. yönetilebilir metinler)
+// ─────────────────────────────────────────────
+
+model SiteContent {
+  id        String   @id @default(cuid())
+  key       String   @unique // e.g. "home_hero", "about_craft_story"
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  translations SiteContentTranslation[]
+
+  @@map("site_contents")
+}
+
+model SiteContentTranslation {
+  id            String      @id @default(cuid())
+  siteContentId String
+  siteContent   SiteContent @relation(fields: [siteContentId], references: [id], onDelete: Cascade)
+  languageCode  String
+  language      Language    @relation(fields: [languageCode], references: [code], onDelete: Cascade)
+  title         String?
+  body          String?
+  imageUrl      String?
+
+  @@unique([siteContentId, languageCode])
+  @@map("site_content_translations")
+}
+
+/// Sitenin genel ayarları. Tek satırdır (id = 1); satırı migration ekler.
+model SiteSettings {
+  id             Int      @id @default(1)
+  /// Açıkken ziyaretçiler yalnızca "Yakında" sayfasını görür
+  /// (src/proxy.ts). Mağaza açılana kadar açık başlar.
+  comingSoon     Boolean  @default(true)
+  /// İletişim ve Yakında sayfalarındaki WhatsApp bağlantısının numarası:
+  /// ülke koduyla, yalnızca rakam (ör. 905551234567). Boşsa bağlantı
+  /// gösterilmez.
+  whatsappNumber String?
+  updatedAt      DateTime @updatedAt
+
+  @@map("site_settings")
+}
+
+// ─────────────────────────────────────────────
+// Media (genel görsel kütüphanesi)
+// ─────────────────────────────────────────────
+
+model Media {
+  id        String   @id @default(cuid())
+  url       String
+  altText   String?
+  mimeType  String?
+  createdAt DateTime @default(now())
+
+  @@map("media")
+}

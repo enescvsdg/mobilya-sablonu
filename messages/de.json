@@ -1,0 +1,146 @@
+{
+  "Metadata": {
+    "title": "{brandName} | Handgefertigte Möbel",
+    "description": "{brandName} fertigt Möbel von Hand, in denen zeitloses Design auf echte Handwerkskunst trifft.",
+    "collectionsDescription": "Entdecken Sie unsere handgefertigten Kollektionen, in denen zeitloses Design auf Handwerkskunst trifft.",
+    "collectionDescription": "Die Kollektion {name}: Möbel, von Hand gefertigt im Atelier von {brandName}.",
+    "productDescription": "{name}: Möbel, von Hand gefertigt im Atelier von {brandName}. Fordern Sie ein Angebot für Preise und Bestellungen an.",
+    "aboutDescription": "Die Geschichte von {brandName}, unser Atelier und das Versprechen der Handarbeit hinter jedem Stück.",
+    "contactDescription": "Kontaktieren Sie {brandName} für Sonderanfertigungen, Angebote und alle Ihre Fragen."
+  },
+  "Nav": {
+    "home": "Startseite",
+    "collections": "Kollektionen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "skipToContent": "Zum Inhalt springen"
+  },
+  "LanguageSwitcher": {
+    "label": "Sprache"
+  },
+  "Home": {
+    "heroTitle": "Zeitlose Eleganz, meisterhafte Handarbeit",
+    "heroSubtitle": "Vollständig handgefertigte Boutique-Möbel, die zeitloses Design in moderne Wohnräume bringen.",
+    "heroCta": "Kollektionen entdecken",
+    "collectionsTitle": "Ausgewählte Kollektionen",
+    "craftTitle": "Handwerkskunst in jedem Detail",
+    "craftText": "Jedes Stück entsteht mit Geduld und Meisterschaft in Händen, die das Holz kennen. In unserem Atelier wird kein Sessel in Serie gefertigt.",
+    "craftCta": "Unsere Geschichte",
+    "productsTitle": "Ausgewählte Produkte",
+    "viewDetails": "Details ansehen",
+    "quoteText": "Hinter jeder samtigen Berührung steht eine Handwerkskunst, die über Generationen weitergegeben wurde."
+  },
+  "Footer": {
+    "tagline": "Möbel, in denen zeitlose Eleganz auf Handarbeit trifft.",
+    "quickLinks": "Schnellzugriff",
+    "contactTitle": "Kontakt",
+    "followUs": "Folgen Sie uns",
+    "rights": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen"
+  },
+  "Collections": {
+    "title": "Kollektionen",
+    "subtitle": "Jedes Stück erzählt eine Geschichte, von Hand geformt.",
+    "empty": "In dieser Kollektion gibt es noch keine Produkte.",
+    "noCategories": "Unsere Kollektionen erscheinen hier in Kürze."
+  },
+  "Product": {
+    "specifications": "Technische Details",
+    "dimensions": "Maße",
+    "requestQuote": "Angebot anfordern",
+    "backToCollection": "Zurück zur Kollektion",
+    "materials": "Materialien",
+    "variants": "Optionen",
+    "unitCm": "cm"
+  },
+  "About": {
+    "kicker": "Unsere Geschichte",
+    "title": "Die Geschichte von {brandName}",
+    "storyP1": "Alles begann mit einer Überzeugung: Gute Möbel sollten ein Leben lang halten. {brandName} bringt diese Überzeugung mit Können, Geduld und Sorgfalt in die Wohnungen von heute.",
+    "storyP2": "In unserer Werkstatt entsteht jedes Stück einzeln, von Händen, die Holz und Stoff seit Jahren kennen. Kein Sessel, kein Tisch gleicht dem anderen – denn Handarbeit sucht Charakter, nicht perfekte Wiederholung.",
+    "storyP3": "Wir verbinden klassische Handwerkskunst mit der Schlichtheit modernen Wohnens. Das Ergebnis: Möbel, die die Zeit überdauern und sich mühelos in heutige Wohnungen einfügen.",
+    "craftTitle": "Unser Versprechen der Handarbeit",
+    "craftText": "Keine Serienfertigung, keine gegossenen Teile. Jede Bestellung entsteht in wochenlanger Arbeit in den Händen unserer Kunsthandwerker."
+  },
+  "Contact": {
+    "title": "Kontakt",
+    "subtitle": "Schreiben Sie uns bei Fragen und für Sonderanfertigungen.",
+    "name": "Vor- und Nachname",
+    "email": "E-Mail",
+    "phone": "Telefon (optional)",
+    "message": "Ihre Nachricht",
+    "productContext": "– dazu möchte ich mehr erfahren",
+    "submit": "Senden",
+    "sending": "Wird gesendet …",
+    "success": "Ihre Nachricht ist bei uns eingegangen – wir melden uns in Kürze.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "infoTitle": "Kontaktieren Sie uns",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Guten Tag, könnte ich einige Informationen erhalten?",
+    "followUs": "Folgen Sie uns",
+    "addressTitle": "Unser Showroom",
+    "getDirections": "Route planen",
+    "rateLimited": "Sie haben zu viele Nachrichten gesendet. Bitte versuchen Sie es später erneut.",
+    "consent": "Mit dem Absenden dieses Formulars bestätige ich, dass ich die <link>Datenschutzerklärung</link> gelesen habe, und willige ein, dass meine personenbezogenen Daten zur Beantwortung meiner Anfrage verarbeitet werden."
+  },
+  "Error": {
+    "notFoundTitle": "Seite nicht gefunden",
+    "notFoundText": "Die gesuchte Seite wurde möglicherweise verschoben oder hat nie existiert. Entdecken Sie stattdessen unsere Kollektionen.",
+    "backHome": "Zur Startseite",
+    "errorTitle": "Etwas ist schiefgelaufen",
+    "errorText": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    "errorCode": "Fehlercode: {code}",
+    "retry": "Erneut versuchen"
+  },
+  "Privacy": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Zuletzt aktualisiert: {date}",
+    "intro": "Bei {brandName} nehmen wir den Schutz Ihrer personenbezogenen Daten ernst. Diese Erklärung beschreibt, welche Daten wir verarbeiten, warum wir sie verarbeiten und wie lange wir sie aufbewahren – gemäß dem türkischen Gesetz Nr. 6698 zum Schutz personenbezogener Daten (KVKK).",
+    "controllerTitle": "1. Verantwortlicher",
+    "controllerText": "Verantwortlicher ist {legalName}. Fragen und Anliegen zu dieser Erklärung können Sie an {email} richten.",
+    "dataTitle": "2. Welche personenbezogenen Daten wir verarbeiten",
+    "dataText": "Wenn Sie das Kontakt- oder Angebotsformular auf unserer Website ausfüllen, erhalten wir Ihren Namen, Ihre E-Mail-Adresse, Ihre Telefonnummer (falls angegeben) und den Inhalt Ihrer Nachricht. Um Missbrauch des Formulars zu verhindern, wird Ihre IP-Adresse niemals im Klartext gespeichert, sondern nur als nicht umkehrbarer Hashwert.",
+    "purposeTitle": "3. Zwecke der Verarbeitung",
+    "purposeText": "Ihre Daten werden ausschließlich verarbeitet, um Ihre Anfrage zu beantworten, ein Angebot zu erstellen, den Bestellvorgang abzuwickeln und Missbrauch des Formulars zu verhindern. Ohne Ihre Einwilligung senden wir Ihnen keine Werbe-E-Mails.",
+    "legalBasisTitle": "4. Rechtsgrundlage",
+    "legalBasisText": "Die Verarbeitung beruht auf Art. 5/2-c KVKK (unmittelbar mit dem Abschluss oder der Erfüllung eines Vertrags verbunden) und Art. 5/2-f KVKK (berechtigte Interessen des Verantwortlichen).",
+    "sharingTitle": "5. Weitergabe",
+    "sharingText": "Ihre personenbezogenen Daten werden niemals an Dritte verkauft. Nur unsere Hosting-, Datenbank- und E-Mail-Dienstleister verarbeiten die Daten in unserem Auftrag und nach unseren Weisungen, damit die Website betrieben werden kann. Soweit gesetzlich vorgeschrieben, können Daten an zuständige Behörden weitergegeben werden.",
+    "retentionTitle": "6. Speicherdauer",
+    "retentionText": "Über das Formular übermittelte Daten werden höchstens 3 Jahre nach Abschluss Ihrer Anfrage aufbewahrt und danach gelöscht oder anonymisiert.",
+    "cookiesTitle": "7. Cookies",
+    "cookiesText": "Unsere Website verwendet keine Werbe- oder Tracking-Cookies. Es werden nur unbedingt erforderliche Cookies eingesetzt, um Ihre Spracheinstellung zu speichern und die Anmeldung im Verwaltungsbereich aufrechtzuerhalten.",
+    "rightsTitle": "8. Ihre Rechte",
+    "rightsText": "Nach Art. 11 KVKK haben Sie das Recht zu erfahren, ob Ihre personenbezogenen Daten verarbeitet werden, Auskunft darüber zu verlangen, ihre Berichtigung, Löschung oder Vernichtung zu verlangen und der Verarbeitung zu widersprechen. Richten Sie Ihre Anfragen an {email}; wir antworten spätestens innerhalb von 30 Tagen."
+  },
+  "Terms": {
+    "title": "Nutzungsbedingungen",
+    "lastUpdated": "Zuletzt aktualisiert: {date}",
+    "intro": "Mit dem Besuch dieser Website gelten die nachstehenden Bedingungen als angenommen. Wenn Sie ihnen nicht zustimmen, nutzen Sie die Website bitte nicht.",
+    "scopeTitle": "1. Umfang der Website",
+    "scopeText": "Die Website von {brandName} ist ein Produktkatalog; über sie werden weder Direktverkäufe getätigt noch Online-Zahlungen entgegengenommen. Produktanfragen werden über das Kontaktformular gestellt und jeweils einzeln geprüft.",
+    "ipTitle": "2. Geistiges Eigentum",
+    "ipText": "Alle Bilder, Entwürfe, Texte und Markenelemente auf der Website gehören {legalName}. Ohne schriftliche Genehmigung dürfen sie weder kopiert, vervielfältigt, kommerziell genutzt noch an anderer Stelle veröffentlicht werden.",
+    "productTitle": "3. Produktinformationen",
+    "productText": "Da jedes Stück von Hand gefertigt wird, kann es leichte Abweichungen in Holzmaserung, Farbton und Maßen geben. Dies ist kein Mangel, sondern eine natürliche Folge der Handarbeit. Die Abbildungen auf der Website sind beispielhaft.",
+    "priceTitle": "4. Preise und Angebote",
+    "priceText": "Auf der Website genannte Preise dienen nur der Information und stellen kein verbindliches Verkaufsangebot dar. Aktueller Preis, Materialoptionen und Lieferzeit werden Ihnen in einem schriftlichen Angebot bestätigt.",
+    "liabilityTitle": "5. Haftungsbeschränkung",
+    "liabilityText": "Wir achten darauf, die Informationen auf dieser Website korrekt und aktuell zu halten; für mittelbare Schäden aufgrund von Schreibfehlern oder vorübergehender Nichterreichbarkeit der Website können wir jedoch nicht haftbar gemacht werden.",
+    "linksTitle": "6. Externe Links",
+    "linksText": "Die Website kann Links zu Dritten enthalten, etwa zu unseren Social-Media-Konten und zu einem Kartendienst. {brandName} ist für die Inhalte und Datenschutzpraktiken dieser Websites nicht verantwortlich.",
+    "changesTitle": "7. Änderungen",
+    "changesText": "Diese Bedingungen können ohne vorherige Ankündigung geändert werden. Die aktuelle Fassung wird stets auf dieser Seite veröffentlicht.",
+    "lawTitle": "8. Anwendbares Recht",
+    "lawText": "Diese Bedingungen unterliegen dem Recht der Republik Türkei. Für alle Streitigkeiten sind die Gerichte und Vollstreckungsbehörden in {courtCity} zuständig.",
+    "contactTitle": "9. Kontakt",
+    "contactText": "Bei Fragen erreichen Sie uns unter {email}."
+  },
+  "ComingSoon": {
+    "title": "Demnächst",
+    "metaTitle": "{brandName} — Demnächst",
+    "metaDescription": "Handgefertigte Möbel. {brandName} öffnet bald die Türen – verfolgen Sie unseren Weg auf Instagram.",
+    "instagram": "Folgen Sie uns auf Instagram"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "Metadata": {
+    "title": "{brandName} | Mobilier fait main",
+    "description": "{brandName} crée un mobilier fait main où le design intemporel rencontre un véritable savoir-faire.",
+    "collectionsDescription": "Découvrez nos collections faites main, où le design intemporel rencontre le savoir-faire.",
+    "collectionDescription": "La collection {name} : mobilier fabriqué à la main dans l'atelier {brandName}.",
+    "productDescription": "{name} : mobilier fabriqué à la main dans l'atelier {brandName}. Demandez un devis pour les prix et les commandes.",
+    "aboutDescription": "{brandName} : notre histoire, notre atelier et la promesse du fait main derrière chaque pièce.",
+    "contactDescription": "Contactez {brandName} pour vos commandes sur mesure, vos devis et toutes vos questions."
+  },
+  "Nav": {
+    "home": "Accueil",
+    "collections": "Collections",
+    "about": "À propos",
+    "contact": "Contact",
+    "skipToContent": "Aller au contenu"
+  },
+  "LanguageSwitcher": {
+    "label": "Langue"
+  },
+  "Home": {
+    "heroTitle": "Élégance intemporelle, savoir-faire artisanal",
+    "heroSubtitle": "Un mobilier de boutique entièrement fait main, qui fait entrer le design intemporel dans les intérieurs contemporains.",
+    "heroCta": "Découvrir les collections",
+    "collectionsTitle": "Collections à la une",
+    "craftTitle": "Le savoir-faire dans chaque détail",
+    "craftText": "Chaque pièce prend forme avec patience et maîtrise, entre des mains qui connaissent le bois. Dans notre atelier, aucun fauteuil n'est produit en série.",
+    "craftCta": "Découvrir notre histoire",
+    "productsTitle": "Produits à la une",
+    "viewDetails": "Voir les détails",
+    "quoteText": "Derrière chaque caresse de velours se cache un savoir-faire transmis de génération en génération."
+  },
+  "Footer": {
+    "tagline": "Un mobilier où l'élégance intemporelle rencontre le fait main.",
+    "quickLinks": "Liens rapides",
+    "contactTitle": "Contact",
+    "followUs": "Suivez-nous",
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
+  },
+  "Collections": {
+    "title": "Collections",
+    "subtitle": "Chaque pièce porte une histoire façonnée à la main.",
+    "empty": "Cette collection ne contient pas encore de produits.",
+    "noCategories": "Nos collections seront bientôt présentées ici."
+  },
+  "Product": {
+    "specifications": "Caractéristiques",
+    "dimensions": "Dimensions",
+    "requestQuote": "Demander un devis",
+    "backToCollection": "Retour à la collection",
+    "materials": "Matériaux",
+    "variants": "Options",
+    "unitCm": "cm"
+  },
+  "About": {
+    "kicker": "Notre histoire",
+    "title": "L'histoire de {brandName}",
+    "storyP1": "Tout est parti d'une conviction : un bon meuble doit durer toute une vie. {brandName} fait entrer cette conviction dans les intérieurs d'aujourd'hui, avec savoir-faire, patience et soin.",
+    "storyP2": "Dans notre atelier, chaque pièce est façonnée une à une, par des mains qui connaissent le bois et le tissu depuis des années. Aucun fauteuil, aucune table n'est identique à un autre — car le fait main recherche le caractère, pas la répétition parfaite.",
+    "storyP3": "Nous associons le savoir-faire classique à la simplicité de la vie moderne. Le résultat : un mobilier qui traverse le temps tout en trouvant naturellement sa place dans les intérieurs d'aujourd'hui.",
+    "craftTitle": "Notre promesse artisanale",
+    "craftText": "Pas de production en série, pas de pièces moulées. Chaque commande prend vie au fil de semaines de travail entre les mains de nos artisans."
+  },
+  "Contact": {
+    "title": "Contact",
+    "subtitle": "Écrivez-nous pour vos questions et vos commandes sur mesure.",
+    "name": "Nom et prénom",
+    "email": "E-mail",
+    "phone": "Téléphone (facultatif)",
+    "message": "Votre message",
+    "productContext": "— je souhaite en savoir plus",
+    "submit": "Envoyer",
+    "sending": "Envoi en cours…",
+    "success": "Votre message a bien été reçu — nous vous répondrons très prochainement.",
+    "error": "Une erreur s'est produite, veuillez réessayer.",
+    "infoTitle": "Nous contacter",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Bonjour, pourrais-je avoir des informations ?",
+    "followUs": "Suivez-nous",
+    "addressTitle": "Notre showroom",
+    "getDirections": "Itinéraire",
+    "rateLimited": "Vous avez envoyé trop de messages. Veuillez réessayer plus tard.",
+    "consent": "En envoyant ce formulaire, je confirme avoir lu la <link>Politique de confidentialité</link> et j'accepte que mes données personnelles soient traitées afin de répondre à ma demande."
+  },
+  "Error": {
+    "notFoundTitle": "Page introuvable",
+    "notFoundText": "La page que vous cherchez a peut-être été déplacée ou n'a jamais existé. Découvrez plutôt nos collections.",
+    "backHome": "Retour à l'accueil",
+    "errorTitle": "Une erreur s'est produite",
+    "errorText": "Une erreur inattendue est survenue. Veuillez réessayer.",
+    "errorCode": "Code d'erreur : {code}",
+    "retry": "Réessayer"
+  },
+  "Privacy": {
+    "title": "Politique de confidentialité",
+    "lastUpdated": "Dernière mise à jour : {date}",
+    "intro": "Chez {brandName}, nous prenons au sérieux la protection de vos données personnelles. La présente politique explique quelles données nous traitons, pourquoi nous les traitons et combien de temps nous les conservons, conformément à la loi turque n° 6698 sur la protection des données personnelles (KVKK).",
+    "controllerTitle": "1. Responsable du traitement",
+    "controllerText": "Le responsable du traitement est {legalName}. Vous pouvez adresser toute question ou demande relative à la présente politique à {email}.",
+    "dataTitle": "2. Données personnelles traitées",
+    "dataText": "Lorsque vous remplissez le formulaire de contact ou de devis sur notre site, nous recevons votre nom, votre adresse e-mail, votre numéro de téléphone (s'il est indiqué) et le contenu de votre message. Afin de prévenir les abus du formulaire, votre adresse IP n'est jamais conservée en clair, mais uniquement sous forme d'empreinte irréversible.",
+    "purposeTitle": "3. Finalités du traitement",
+    "purposeText": "Vos données sont traitées uniquement pour répondre à votre demande, établir un devis, gérer le processus de commande et prévenir les abus du formulaire. Nous ne vous envoyons aucun e-mail commercial sans votre consentement.",
+    "legalBasisTitle": "4. Base juridique",
+    "legalBasisText": "Le traitement repose sur l'art. 5/2-c de la KVKK (lié directement à la conclusion ou à l'exécution d'un contrat) et sur l'art. 5/2-f (intérêts légitimes du responsable du traitement).",
+    "sharingTitle": "5. Partage",
+    "sharingText": "Vos données personnelles ne sont jamais vendues à des tiers. Seuls nos prestataires d'hébergement, de base de données et d'e-mail traitent les données pour notre compte et selon nos instructions, afin que le site puisse fonctionner. Les données peuvent être communiquées aux autorités compétentes lorsque la loi l'exige.",
+    "retentionTitle": "6. Durée de conservation",
+    "retentionText": "Les données transmises par le formulaire sont conservées au maximum 3 ans après le traitement de votre demande, puis supprimées ou anonymisées.",
+    "cookiesTitle": "7. Cookies",
+    "cookiesText": "Notre site n'utilise aucun cookie publicitaire ou de suivi. Seuls des cookies strictement nécessaires sont utilisés, pour mémoriser votre choix de langue et maintenir la session du panneau d'administration.",
+    "rightsTitle": "8. Vos droits",
+    "rightsText": "Conformément à l'art. 11 de la KVKK, vous avez le droit de savoir si vos données personnelles sont traitées, d'obtenir des informations à leur sujet, d'en demander la rectification, l'effacement ou la destruction, et de vous opposer à leur traitement. Adressez vos demandes à {email} ; nous y répondons dans un délai maximal de 30 jours."
+  },
+  "Terms": {
+    "title": "Conditions d'utilisation",
+    "lastUpdated": "Dernière mise à jour : {date}",
+    "intro": "En visitant ce site, vous êtes réputé accepter les conditions ci-dessous. Si vous ne les acceptez pas, veuillez ne pas utiliser le site.",
+    "scopeTitle": "1. Objet du site",
+    "scopeText": "Le site {brandName} est un catalogue de produits ; aucune vente directe n'y est conclue et aucun paiement en ligne n'y est accepté. Les demandes concernant les produits se font via le formulaire de contact et chacune est étudiée individuellement.",
+    "ipTitle": "2. Propriété intellectuelle",
+    "ipText": "L'ensemble des images, créations, textes et éléments de marque présents sur le site appartiennent à {legalName}. Ils ne peuvent être copiés, reproduits, exploités commercialement ou republiés ailleurs sans autorisation écrite.",
+    "productTitle": "3. Informations sur les produits",
+    "productText": "Chaque pièce étant fabriquée à la main, de légères variations peuvent apparaître dans le veinage du bois, la teinte et les dimensions. Il ne s'agit pas d'un défaut, mais d'une conséquence naturelle du travail artisanal. Les images du site sont présentées à titre indicatif.",
+    "priceTitle": "4. Prix et devis",
+    "priceText": "Les prix indiqués sur le site sont donnés à titre informatif et ne constituent pas une offre de vente ferme. Le prix actuel, les options de matériaux et le délai de fabrication vous sont confirmés dans un devis écrit.",
+    "liabilityTitle": "5. Limitation de responsabilité",
+    "liabilityText": "Nous veillons à ce que les informations de ce site soient exactes et à jour ; nous ne saurions toutefois être tenus responsables des dommages indirects résultant d'erreurs typographiques ou d'une indisponibilité temporaire du site.",
+    "linksTitle": "6. Liens externes",
+    "linksText": "Le site peut contenir des liens vers des tiers, comme nos comptes sur les réseaux sociaux et un service de cartographie. {brandName} n'est pas responsable du contenu ni des pratiques de confidentialité de ces sites.",
+    "changesTitle": "7. Modifications",
+    "changesText": "Les présentes conditions peuvent être modifiées sans préavis. La version en vigueur est toujours publiée sur cette page.",
+    "lawTitle": "8. Droit applicable",
+    "lawText": "Les présentes conditions sont régies par le droit de la République de Turquie. Tout litige relève de la compétence des tribunaux et offices d'exécution de la ville de {courtCity}.",
+    "contactTitle": "9. Contact",
+    "contactText": "Pour toute question, vous pouvez nous écrire à {email}."
+  },
+  "ComingSoon": {
+    "title": "Bientôt",
+    "metaTitle": "{brandName} — Bientôt",
+    "metaDescription": "Mobilier fait main. {brandName} ouvre bientôt ses portes — suivez notre aventure sur Instagram.",
+    "instagram": "Suivez-nous sur Instagram"
+  }
+}

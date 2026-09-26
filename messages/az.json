@@ -1,0 +1,146 @@
+{
+  "Metadata": {
+    "title": "{brandName} | Əl işi mebel",
+    "description": "{brandName} zamansız dizaynı həqiqi ustalıqla birləşdirən əl işi mebel hazırlayır.",
+    "collectionsDescription": "Zamansız dizaynın ustalıqla qovuşduğu əl işi kolleksiyalarımızı kəşf edin.",
+    "collectionDescription": "{name} kolleksiyası: {brandName} emalatxanasında əl ilə hazırlanmış mebel.",
+    "productDescription": "{name}: {brandName} emalatxanasında əl ilə hazırlanmış mebel. Qiymət və sifariş üçün təklif istəyin.",
+    "aboutDescription": "{brandName} haqqında: hekayəmiz, emalatxanamız və hər parçanın arxasındakı əl işi vədi.",
+    "contactDescription": "Xüsusi sifarişlər, qiymət təklifləri və bütün suallarınız üçün {brandName} ilə əlaqə saxlayın."
+  },
+  "Nav": {
+    "home": "Ana səhifə",
+    "collections": "Kolleksiyalar",
+    "about": "Haqqımızda",
+    "contact": "Əlaqə",
+    "skipToContent": "Məzmuna keçin"
+  },
+  "LanguageSwitcher": {
+    "label": "Dil"
+  },
+  "Home": {
+    "heroTitle": "Zamansız zəriflik, ustalıqla əl işi",
+    "heroSubtitle": "Zamansız dizaynı müasir yaşayış məkanlarına gətirən, tamamilə əl işi olan butik mebel.",
+    "heroCta": "Kolleksiyaları kəşf edin",
+    "collectionsTitle": "Seçilmiş kolleksiyalar",
+    "craftTitle": "Hər detalda ustalıq",
+    "craftText": "Hər parça ağacı tanıyan əllərdə, səbir və ustalıqla formalaşır. Emalatxanamızda heç bir kreslo kütləvi istehsal olunmur.",
+    "craftCta": "Hekayəmizi kəşf edin",
+    "productsTitle": "Seçilmiş məhsullar",
+    "viewDetails": "Ətraflı bax",
+    "quoteText": "Hər məxmər toxunuşun arxasında nəsildən-nəslə ötürülən bir ustalıq dayanır."
+  },
+  "Footer": {
+    "tagline": "Zamansız zərifliyin əl işi ilə qovuşduğu mebel.",
+    "quickLinks": "Sürətli keçidlər",
+    "contactTitle": "Əlaqə",
+    "followUs": "Bizi izləyin",
+    "rights": "Bütün hüquqlar qorunur.",
+    "privacy": "Məxfilik siyasəti",
+    "terms": "İstifadə şərtləri"
+  },
+  "Collections": {
+    "title": "Kolleksiyalar",
+    "subtitle": "Hər parça əllə formalaşmış bir hekayə daşıyır.",
+    "empty": "Bu kolleksiyada hələ məhsul yoxdur.",
+    "noCategories": "Kolleksiyalarımız tezliklə burada olacaq."
+  },
+  "Product": {
+    "specifications": "Xüsusiyyətlər",
+    "dimensions": "Ölçülər",
+    "requestQuote": "Qiymət təklifi istəyin",
+    "backToCollection": "Kolleksiyaya qayıt",
+    "materials": "Materiallar",
+    "variants": "Seçimlər",
+    "unitCm": "sm"
+  },
+  "About": {
+    "kicker": "Hekayəmiz",
+    "title": "{brandName} hekayəsi",
+    "storyP1": "Hər şey bir inamla başladı: yaxşı mebel bir ömür boyu yaşamalıdır. {brandName} bu inamı ustalıq, səbir və qayğı ilə bugünkü evlərə daşıyır.",
+    "storyP2": "Emalatxanamızda hər parça ağacı və parçanı illərdir tanıyan əllərdə bir-bir hazırlanır. Heç bir kreslo, heç bir masa digərinin eyni deyil – çünki əl işi mükəmməl təkrar deyil, xarakter axtarır.",
+    "storyP3": "Klassik ustalığı müasir həyatın sadəliyi ilə birləşdiririk. Nəticə: zamana tab gətirən, eyni zamanda bugünkü evlərdə rahatca nəfəs alan mebel.",
+    "craftTitle": "Əl işi vədimiz",
+    "craftText": "Kütləvi istehsal yoxdur, qəlib hissələr yoxdur. Hər sifariş ustalarımızın əlində həftələrlə davam edən əməklə həyata keçir."
+  },
+  "Contact": {
+    "title": "Əlaqə",
+    "subtitle": "Suallarınız və xüsusi sifarişləriniz üçün bizimlə əlaqə saxlayın.",
+    "name": "Ad və soyad",
+    "email": "E-poçt",
+    "phone": "Telefon (istəyə bağlı)",
+    "message": "Mesajınız",
+    "productContext": "haqqında məlumat almaq istəyirəm",
+    "submit": "Göndər",
+    "sending": "Göndərilir...",
+    "success": "Mesajınız qəbul edildi – tezliklə sizinlə əlaqə saxlayacağıq.",
+    "error": "Xəta baş verdi, zəhmət olmasa yenidən cəhd edin.",
+    "infoTitle": "Bizimlə əlaqə",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Salam, məlumat ala bilərəmmi?",
+    "followUs": "Bizi izləyin",
+    "addressTitle": "Salonumuz",
+    "getDirections": "Yol tarifi al",
+    "rateLimited": "Çox sayda mesaj göndərdiniz. Zəhmət olmasa bir az sonra yenidən cəhd edin.",
+    "consent": "Bu formu göndərməklə <link>Məxfilik siyasəti</link>ni oxuduğumu və sorğuma cavab verilməsi üçün şəxsi məlumatlarımın emal olunmasına razı olduğumu təsdiq edirəm."
+  },
+  "Error": {
+    "notFoundTitle": "Səhifə tapılmadı",
+    "notFoundText": "Axtardığınız səhifə köçürülmüş və ya heç vaxt mövcud olmamış ola bilər. Əvəzində kolleksiyalarımıza baxın.",
+    "backHome": "Ana səhifəyə qayıt",
+    "errorTitle": "Xəta baş verdi",
+    "errorText": "Gözlənilməz xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.",
+    "errorCode": "Xəta kodu: {code}",
+    "retry": "Yenidən cəhd edin"
+  },
+  "Privacy": {
+    "title": "Məxfilik siyasəti",
+    "lastUpdated": "Son yenilənmə: {date}",
+    "intro": "{brandName} olaraq şəxsi məlumatlarınızın qorunmasına ciddi yanaşırıq. Bu bildiriş Türkiyənin 6698 nömrəli Şəxsi Məlumatların Qorunması Qanununa (KVKK) uyğun olaraq hansı məlumatları, nə üçün emal etdiyimizi və nə qədər saxladığımızı izah edir.",
+    "controllerTitle": "1. Məlumat nəzarətçisi",
+    "controllerText": "Məlumat nəzarətçisi: {legalName}. Bu bildirişlə bağlı hər hansı sual və ya müraciətinizi {email} ünvanına göndərə bilərsiniz.",
+    "dataTitle": "2. Emal etdiyimiz şəxsi məlumatlar",
+    "dataText": "Saytımızdakı əlaqə və ya qiymət təklifi formunu doldurduğunuzda adınız, e-poçt ünvanınız, telefon nömrəniz (qeyd etmisinizsə) və mesajınızın məzmunu bizə çatır. Formdan sui-istifadənin qarşısını almaq üçün IP ünvanınız heç vaxt açıq şəkildə saxlanılmır, yalnız geri qaytarıla bilməyən heş (hash) kimi saxlanılır.",
+    "purposeTitle": "3. Emal məqsədləri",
+    "purposeText": "Məlumatlarınız yalnız sorğunuza cavab vermək, qiymət təklifi hazırlamaq, sifariş prosesini idarə etmək və formdan sui-istifadənin qarşısını almaq üçün emal olunur. Razılığınız olmadan sizə reklam e-poçtları göndərmirik.",
+    "legalBasisTitle": "4. Hüquqi əsas",
+    "legalBasisText": "Emal KVKK-nın 5/2-c maddəsinə (müqavilənin bağlanması və ya icrası ilə birbaşa əlaqəli olması) və 5/2-f maddəsinə (məlumat nəzarətçisinin qanuni maraqları) əsaslanır.",
+    "sharingTitle": "5. Paylaşım",
+    "sharingText": "Şəxsi məlumatlarınız heç vaxt üçüncü şəxslərə satılmır. Saytın işləməsi üçün məlumatları yalnız hostinq, verilənlər bazası və e-poçt xidmətlərimizi göstərən şirkətlər bizim adımızdan və göstərişimizlə emal edir. Qanunla tələb olunduqda məlumatlar səlahiyyətli dövlət orqanları ilə paylaşıla bilər.",
+    "retentionTitle": "6. Saxlama müddəti",
+    "retentionText": "Form vasitəsilə göndərilən məlumatlar sorğunuz yekunlaşdıqdan sonra ən çoxu 3 il saxlanılır, sonra silinir və ya anonimləşdirilir.",
+    "cookiesTitle": "7. Kukilər",
+    "cookiesText": "Saytımız heç bir reklam və ya izləmə kukisi istifadə etmir. Yalnız dil seçiminizi yadda saxlamaq və idarəetmə panelində sessiyanı açıq saxlamaq üçün zəruri kukilərdən istifadə olunur.",
+    "rightsTitle": "8. Hüquqlarınız",
+    "rightsText": "KVKK-nın 11-ci maddəsinə əsasən şəxsi məlumatlarınızın emal olunub-olunmadığını öyrənmək, bu barədə məlumat istəmək, onların düzəldilməsini, silinməsini və ya məhv edilməsini tələb etmək və emala etiraz etmək hüququnuz var. Müraciətlərinizi {email} ünvanına göndərin; ən gec 30 gün ərzində cavab veririk."
+  },
+  "Terms": {
+    "title": "İstifadə şərtləri",
+    "lastUpdated": "Son yenilənmə: {date}",
+    "intro": "Bu saytı ziyarət etməklə aşağıdakı şərtləri qəbul etmiş sayılırsınız. Qəbul etmirsinizsə, zəhmət olmasa saytdan istifadə etməyin.",
+    "scopeTitle": "1. Saytın məqsədi",
+    "scopeText": "{brandName} saytı məhsul kataloqudur; sayt vasitəsilə birbaşa satış edilmir və onlayn ödəniş qəbul olunmur. Məhsul sorğuları əlaqə formu ilə göndərilir və hər biri ayrıca qiymətləndirilir.",
+    "ipTitle": "2. Əqli mülkiyyət",
+    "ipText": "Saytdakı bütün şəkillər, dizaynlar, mətnlər və brend elementləri {legalName} şirkətinə məxsusdur. Yazılı icazə olmadan onları surətini çıxarmaq, çoxaltmaq, kommersiya məqsədilə istifadə etmək və ya başqa yerdə dərc etmək olmaz.",
+    "productTitle": "3. Məhsul məlumatları",
+    "productText": "Hər parça əl ilə hazırlandığından ağacın naxışında, rəng tonunda və ölçülərdə cüzi fərqlər ola bilər. Bu qüsur deyil, əl işinin təbii nəticəsidir. Saytdakı şəkillər nümunə xarakteri daşıyır.",
+    "priceTitle": "4. Qiymətlər və təkliflər",
+    "priceText": "Saytda göstərilən qiymətlər yalnız məlumat xarakteri daşıyır və bağlayıcı satış təklifi deyil. Aktual qiymət, material seçimləri və hazırlanma müddəti sizə yazılı təkliflə təsdiqlənir.",
+    "liabilityTitle": "5. Məsuliyyətin məhdudlaşdırılması",
+    "liabilityText": "Saytdakı məlumatların düzgün və aktual olmasına diqqət yetiririk; lakin yazı səhvlərindən və ya saytın müvəqqəti əlçatan olmamasından yaranan dolayı zərərlərə görə məsuliyyət daşımırıq.",
+    "linksTitle": "6. Xarici keçidlər",
+    "linksText": "Saytda sosial media hesablarımız və xəritə xidməti kimi üçüncü tərəf keçidləri ola bilər. {brandName} həmin saytların məzmununa və ya məxfilik təcrübələrinə görə məsuliyyət daşımır.",
+    "changesTitle": "7. Dəyişikliklər",
+    "changesText": "Bu şərtlər əvvəlcədən xəbərdarlıq edilmədən yenilənə bilər. Qüvvədə olan versiya həmişə bu səhifədə dərc olunur.",
+    "lawTitle": "8. Tətbiq olunan hüquq",
+    "lawText": "Bu şərtlər Türkiyə Respublikasının qanunlarına tabedir. Hər hansı mübahisəyə {courtCity} məhkəmələri və icra idarələri baxır.",
+    "contactTitle": "9. Əlaqə",
+    "contactText": "Hər hansı sualınız üçün {email} ünvanı ilə bizimlə əlaqə saxlaya bilərsiniz."
+  },
+  "ComingSoon": {
+    "title": "Çox tezliklə",
+    "metaTitle": "{brandName} — Çox tezliklə",
+    "metaDescription": "Əl işi mebel. {brandName} çox tezliklə qapılarını açır – yolumuzu Instagram-da izləyin.",
+    "instagram": "Bizi Instagram-da izləyin"
+  }
+}

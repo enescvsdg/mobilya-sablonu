@@ -1,0 +1,41 @@
+# Supabase'in ücretsiz planı, bir hafta hiç kullanılmayan projeyi duraklatır.
+# Her gün veritabanına sorgu yaptıran bir sayfa açılır; Supabase bunu gerçek
+# bir ziyaret gibi sayar. Sayfa açılmazsa iş başarısız olur ve GitHub hesap
+# sahibine e-posta gönderir — böylece "site ayakta mı" kontrolü de olur.
+name: Siteyi uyanık tut
+
+on:
+  schedule:
+    - cron: "17 3 * * *" # Her gün 03:17 UTC (06:17 TSİ)
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      # Koleksiyonlar sayfası her istekte veritabanından okunur (önbelleklenmez).
+      # "Yakında" modu açıkken adres ana sayfaya yönlenir; o istekte de site
+      # modu veritabanından okur. Yönlendirme izlenir (-L), son yanıt 200 olmalı.
+      # Sitenin adresi depo ayarlarında SITE_URL değişkenidir (Settings →
+      # Secrets and variables → Actions → Variables), ör. https://ornekmobilya.com.
+      # Tanımlı değilse (şablonun kendisi, henüz yayında olmayan site) iş atlanır.
+      SITE_URL: ${{ vars.SITE_URL }}
+    steps:
+      - name: Veritabanını kullanan bir sayfayı aç
+        run: |
+          if [ -z "$SITE_URL" ]; then
+            echo "::notice::SITE_URL değişkeni tanımlı değil; site henüz yayında değil sayıldı, atlandı."
+            exit 0
+          fi
+          status=$(curl -sS -L -o /dev/null -w "%{http_code}" \
+            --max-time 60 --retry 3 --retry-delay 20 \
+            -A "SiteKeepAlive/1.0 (+github-actions)" \
+            "$SITE_URL/tr/koleksiyonlar")
+          echo "Yanıt kodu: $status"
+          if [ "$status" != "200" ]; then
+            echo "::error::$SITE_URL/tr/koleksiyonlar açılamadı (HTTP $status)."
+            exit 1
+          fi

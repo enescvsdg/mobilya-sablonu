@@ -1,0 +1,561 @@
+/*
+ * "Yakında" sahnesi.
+ *
+ * Açık sahne görseli en altta durur. Kapalı perde görseli iki kez, üstüne
+ * aynı yere konur; her kopya perdenin yalnızca bir yarısını gösterecek
+ * şekilde kırpılır (clip-path) ve dış kenarına doğru daralarak (scaleX)
+ * kumaşın toplanması taklit edilir. Kırpma yalnızca kumaş bölgesini
+ * kapsar: çerçeve, perde başlığı ve zemin hep açık sahne görselinden gelir,
+ * bu yüzden iki görsel arasındaki küçük farklar görünmez. Perde yanlara
+ * varınca kopyalar solar ve altta bağlı perdeler kalır.
+ *
+ * Koordinatlar görsellerdeki kumaş bölgesinin yüzdesidir (yatay 1672x941,
+ * dikey 941x1672); görseller değişirse yeniden ölçülmeli.
+ *
+ * Tüm hareket [data-ready] ile başlar: görseller yüklenmeden perde
+ * açılırsa boş ekran açılır.
+ *
+ * Perde kapalıyken (src/config/brand.ts → features.comingSoonCurtain)
+ * görseller yerine marka renginde bir zemin (.backdrop) durur ve yazılar,
+ * perdenin açılmasını beklemeden --shift kadar erken belirir.
+ *
+ * Renkler marka değişkenlerinden gelir (src/lib/brand-theme.ts); ışık ve
+ * gölge tonları markadan bağımsızdır.
+ */
+
+.root {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #050505;
+  color: var(--surface-warm);
+  --shift: 0s;
+  --ease-curtain: cubic-bezier(0.6, 0, 0.25, 1);
+  --ease-reveal: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.root[data-curtain="off"] {
+  --shift: -2.2s;
+}
+
+/* Görselin oranını koruyarak ekranı tamamen kaplayan kutu (object-fit: cover). */
+.stage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  aspect-ratio: 1672 / 941;
+  width: max(100vw, calc(100dvh * 1672 / 941));
+  transform: translate(-50%, -50%);
+
+  --x-left: 6.699%;
+  --x-right: 93.481%;
+  --x-center: 50.09%;
+  --y-top: 11.477%;
+  --y-bottom: 21.998%;
+}
+
+@media (orientation: portrait) {
+  .stage {
+    aspect-ratio: 941 / 1672;
+    width: max(100vw, calc(100dvh * 941 / 1672));
+
+    --x-left: 9.352%;
+    --x-right: 91.18%;
+    --x-center: 50.266%;
+    --y-top: 7.775%;
+    --y-bottom: 24.282%;
+  }
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+}
+
+.curtainLeft {
+  clip-path: inset(var(--y-top) calc(100% - var(--x-center)) var(--y-bottom) var(--x-left));
+  transform-origin: var(--x-left) 50%;
+}
+
+.curtainRight {
+  clip-path: inset(var(--y-top) calc(100% - var(--x-right)) var(--y-bottom) var(--x-center));
+  transform-origin: var(--x-right) 50%;
+}
+
+/* Perdesiz sahnenin zemini: tepeden vuran ışıkta marka rengi. */
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 80% at 50% 12%,
+    color-mix(in srgb, var(--brand) 82%, white) 0%,
+    var(--brand-dark) 42%,
+    #050505 100%
+  );
+}
+
+/* Salon ışıkları: başta tam karanlık, spot yanınca açılır. */
+.dark {
+  position: absolute;
+  inset: 0;
+  background: #050505;
+}
+
+/* Kenarları karartır; yazının okunmasına da yardım eder. */
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 65% at 50% 45%, transparent 35%, rgb(5 5 5 / 0.7) 100%);
+  pointer-events: none;
+}
+
+/* Spotun hafifçe "nefes alması". */
+.glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 22% 55% at 50% 10%, rgb(255 214 150 / 0.22), transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dust {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.mote {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  left: var(--x);
+  top: var(--y);
+  border-radius: 50%;
+  background: rgb(255 228 180 / 0.85);
+  filter: blur(0.6px);
+  opacity: 0;
+}
+
+/* ── Yazılar ─────────────────────────────────────────── */
+
+.content {
+  position: absolute;
+  inset: 0;
+  /* Kendi katmanı olsun ki arkadaki hale sahnenin altında kalmasın. */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem 8dvh;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* Yazının arkasında hafif koyu bir hale. */
+.content::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  width: min(90vw, 56rem);
+  height: min(60dvh, 26rem);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(closest-side, rgb(5 5 5 / 0.55), transparent);
+  z-index: -1;
+}
+
+.title {
+  margin: 0;
+  /* Arapça sayfada Arapça başlık yazı tipi öne geçer (globals.css). */
+  font-family: var(--font-heading-stack), serif;
+  font-weight: 400;
+  font-size: clamp(2.25rem, 6.2vw, 5.25rem);
+  line-height: 1.05;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--highlight-light);
+  text-shadow: 0 2px 28px rgb(0 0 0 / 0.65);
+}
+
+/* Arap alfabesinde (Arapça, Farsça) harfler geniş harf aralığıyla kopar;
+   başlık biraz daha büyük ve aralıksız yazılır, belirme hareketi yalnızca
+   bulanıklıktan gelir. */
+.title:lang(ar),
+.title:lang(fa) {
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  line-height: 1.3;
+}
+
+.divider {
+  width: clamp(4rem, 9vw, 7.5rem);
+  height: 1px;
+  margin: clamp(1.25rem, 3dvh, 2rem) 0;
+  background: var(--highlight);
+  opacity: 0.75;
+}
+
+.logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(2rem, 4.4vw, 3.5rem);
+  line-height: 1;
+}
+
+.brand {
+  display: block;
+  letter-spacing: 0.06em;
+  /* Işıltı: altın zeminde soldan sağa geçen açık bir şerit. */
+  background: linear-gradient(
+    110deg,
+    var(--highlight) 0%,
+    var(--highlight) 42%,
+    color-mix(in srgb, var(--highlight) 35%, white) 50%,
+    var(--highlight) 58%,
+    var(--highlight) 100%
+  );
+  background-size: 250% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 14px rgb(0 0 0 / 0.6));
+}
+
+.yearRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  width: 100%;
+  margin-top: 0.22em;
+  color: var(--highlight);
+}
+
+.rule {
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.7;
+}
+
+.ruleLeft {
+  transform-origin: right center;
+}
+
+.ruleRight {
+  transform-origin: left center;
+}
+
+.year {
+  font-size: 0.32em;
+  letter-spacing: 0.06em;
+}
+
+/* Alttaki bağlantılar (Instagram, WhatsApp) alt alta; ızgara ikisini de
+   en geniş olanın genişliğinde tutar. left: 50% genişliği ekranın
+   yarısıyla sınırlardı; iki kenara yaslayıp kendi genişliğinde ortalanır. */
+.links {
+  position: absolute;
+  inset-inline: 0;
+  bottom: max(1.75rem, calc(env(safe-area-inset-bottom) + 1.25rem));
+  display: grid;
+  gap: 0.75rem;
+  width: max-content;
+  max-width: calc(100vw - 2rem);
+  margin-inline: auto;
+}
+
+/* Tıklanabildiği belli olsun diye ince altın çerçeveli düğme. */
+.socialButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  min-height: 2.75rem;
+  padding: 0.65rem 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--highlight) 80%, transparent);
+  border-radius: 2px;
+  background: rgb(8 8 8 / 0.45);
+  font-family: var(--font-body-stack), sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  white-space: nowrap;
+  color: var(--highlight-light);
+  text-decoration: none;
+  pointer-events: auto;
+  transition:
+    background-color 0.25s,
+    color 0.25s,
+    border-color 0.25s;
+}
+
+.socialButton:hover,
+.socialButton:focus-visible {
+  background: var(--highlight);
+  border-color: var(--highlight);
+  color: var(--brand-dark);
+}
+
+.socialButton svg {
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.socialLabel {
+  text-transform: uppercase;
+}
+
+.socialDetail {
+  padding-inline-start: 0.7rem;
+  border-inline-start: 1px solid currentColor;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+}
+
+/* Telefonlarda kullanıcı adı alt satıra iner; simge yazıyla kalır.
+   Izgara, düğmeyi en geniş satır kadar tutar. Tek satır Türkçe ve
+   İngilizcede ~470 px ister; sınır, en geniş telefonları (iPhone Pro Max
+   440 px) da payıyla kapsar. */
+@media (max-width: 560px) {
+  .socialButton {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.25rem;
+    column-gap: 0.55rem;
+    white-space: normal;
+    padding: 0.6rem 1rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+  }
+
+  .socialDetail {
+    grid-column: 1 / -1;
+    padding-inline-start: 0;
+    border-inline-start: 0;
+    text-align: center;
+  }
+}
+
+.socialButton:focus-visible {
+  outline: 1px solid var(--highlight);
+  outline-offset: 3px;
+}
+
+/* ── Başlangıç durumu (görseller yüklenene kadar) ────── */
+
+.title,
+.divider,
+.brand,
+.year,
+.socialButton {
+  opacity: 0;
+}
+
+.rule {
+  transform: scaleX(0);
+}
+
+/* ── Zaman çizelgesi ─────────────────────────────────── */
+
+.root[data-ready] .dark {
+  animation: lightsUp 1.3s ease-out 0.15s both;
+}
+
+.root[data-ready] .curtainLeft,
+.root[data-ready] .curtainRight {
+  animation:
+    drawOpen 2.4s var(--ease-curtain) 0.9s both,
+    fadeOut 0.8s ease-in-out 2.9s both;
+}
+
+.root[data-ready] .glow {
+  animation: breathe 7s ease-in-out calc(3.2s + var(--shift)) infinite;
+}
+
+.root[data-ready] .mote {
+  animation: float var(--duration) linear var(--delay) infinite;
+}
+
+.root[data-ready] .title {
+  animation: titleIn 1.6s var(--ease-reveal) calc(3.3s + var(--shift)) both;
+}
+
+.root[data-ready] .divider {
+  animation:
+    fadeIn 0.3s ease-out calc(4.2s + var(--shift)) both,
+    growX 0.9s var(--ease-reveal) calc(4.2s + var(--shift)) both;
+}
+
+.root[data-ready] .brand {
+  animation:
+    riseIn 1.1s var(--ease-reveal) calc(4.5s + var(--shift)) both,
+    shimmer 9s ease-in-out calc(5.6s + var(--shift)) infinite;
+}
+
+.root[data-ready] .rule {
+  animation: growX 0.9s var(--ease-reveal) calc(5s + var(--shift)) both;
+}
+
+.root[data-ready] .year {
+  animation: fadeIn 0.9s ease-out calc(5.1s + var(--shift)) both;
+}
+
+.root[data-ready] .socialButton {
+  animation: fadeIn 1s ease-out calc(5.9s + var(--shift)) both;
+}
+
+@keyframes lightsUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes drawOpen {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0.16);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes growX {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes titleIn {
+  from {
+    opacity: 0;
+    letter-spacing: 0.45em;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.14em;
+    filter: blur(0);
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.3em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* İlk 1,4 saniyede ışıltı geçer, kalan sürede bekler. */
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  16%,
+  100% {
+    background-position: 0% 0;
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  20% {
+    opacity: var(--opacity);
+  }
+  80% {
+    opacity: var(--opacity);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--drift), -6dvh);
+  }
+}
+
+/* Telefonda başlık tek satıra sığsın diye daha küçük yazılır. */
+@media (orientation: portrait) {
+  .title {
+    font-size: clamp(1.75rem, 7.4vw, 3.25rem);
+  }
+
+  .logo {
+    font-size: clamp(1.9rem, 9vw, 3rem);
+  }
+}
+
+/* Hareket hassasiyeti olan ziyaretçi sahnenin açık hâlini doğrudan görür. */
+@media (prefers-reduced-motion: reduce) {
+  .curtainLeft,
+  .curtainRight,
+  .dark,
+  .dust,
+  .glow {
+    display: none;
+  }
+
+  .root .title,
+  .root .divider,
+  .root .brand,
+  .root .year,
+  .root .socialButton,
+  .root[data-ready] .title,
+  .root[data-ready] .divider,
+  .root[data-ready] .brand,
+  .root[data-ready] .year,
+  .root[data-ready] .socialButton {
+    opacity: 1;
+    animation: none;
+  }
+
+  .root .rule,
+  .root[data-ready] .rule {
+    transform: none;
+    animation: none;
+  }
+}

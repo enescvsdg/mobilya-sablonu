@@ -1,0 +1,146 @@
+{
+  "Metadata": {
+    "title": "{brandName} | Muebles hechos a mano",
+    "description": "{brandName} crea muebles hechos a mano en los que el diseño atemporal se une a una auténtica artesanía.",
+    "collectionsDescription": "Descubra nuestras colecciones hechas a mano, donde el diseño atemporal se encuentra con la artesanía.",
+    "collectionDescription": "La colección {name}: muebles hechos a mano en el taller de {brandName}.",
+    "productDescription": "{name}: mueble hecho a mano en el taller de {brandName}. Solicite un presupuesto para precios y pedidos.",
+    "aboutDescription": "La historia de {brandName}, nuestro taller y la promesa artesanal detrás de cada pieza.",
+    "contactDescription": "Póngase en contacto con {brandName} para encargos a medida, presupuestos y cualquier consulta."
+  },
+  "Nav": {
+    "home": "Inicio",
+    "collections": "Colecciones",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "skipToContent": "Ir al contenido"
+  },
+  "LanguageSwitcher": {
+    "label": "Idioma"
+  },
+  "Home": {
+    "heroTitle": "Elegancia atemporal, maestría artesanal",
+    "heroSubtitle": "Muebles de boutique hechos completamente a mano que llevan el diseño atemporal a los espacios contemporáneos.",
+    "heroCta": "Descubrir las colecciones",
+    "collectionsTitle": "Colecciones destacadas",
+    "craftTitle": "Artesanía en cada detalle",
+    "craftText": "Cada pieza toma forma con paciencia y maestría en manos que conocen la madera. En nuestro taller ningún sillón se fabrica en serie.",
+    "craftCta": "Descubrir nuestra historia",
+    "productsTitle": "Productos destacados",
+    "viewDetails": "Ver detalles",
+    "quoteText": "Tras cada caricia de terciopelo hay una maestría artesanal transmitida de generación en generación."
+  },
+  "Footer": {
+    "tagline": "Muebles donde la elegancia atemporal se une a la artesanía.",
+    "quickLinks": "Enlaces rápidos",
+    "contactTitle": "Contacto",
+    "followUs": "Síganos",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de privacidad",
+    "terms": "Condiciones de uso"
+  },
+  "Collections": {
+    "title": "Colecciones",
+    "subtitle": "Cada pieza guarda una historia moldeada a mano.",
+    "empty": "Todavía no hay productos en esta colección.",
+    "noCategories": "Nuestras colecciones estarán aquí muy pronto."
+  },
+  "Product": {
+    "specifications": "Características",
+    "dimensions": "Medidas",
+    "requestQuote": "Solicitar presupuesto",
+    "backToCollection": "Volver a la colección",
+    "materials": "Materiales",
+    "variants": "Opciones",
+    "unitCm": "cm"
+  },
+  "About": {
+    "kicker": "Nuestra historia",
+    "title": "La historia de {brandName}",
+    "storyP1": "Todo empezó con una convicción: un buen mueble debe durar toda la vida. {brandName} lleva esa convicción a los hogares de hoy con oficio, paciencia y cuidado.",
+    "storyP2": "En nuestro taller cada pieza se elabora una a una, en manos que conocen la madera y la tela desde hace años. Ningún sillón ni ninguna mesa es igual a otra, porque la artesanía busca carácter, no la repetición perfecta.",
+    "storyP3": "Unimos la artesanía clásica con la sencillez de la vida moderna. El resultado: muebles que resisten el paso del tiempo y se integran con naturalidad en los hogares de hoy.",
+    "craftTitle": "Nuestra promesa artesanal",
+    "craftText": "Sin producción en serie ni piezas moldeadas. Cada pedido cobra vida tras semanas de trabajo en manos de nuestros artesanos."
+  },
+  "Contact": {
+    "title": "Contacto",
+    "subtitle": "Escríbanos para sus consultas y encargos a medida.",
+    "name": "Nombre y apellidos",
+    "email": "Correo electrónico",
+    "phone": "Teléfono (opcional)",
+    "message": "Su mensaje",
+    "productContext": "— me gustaría recibir más información",
+    "submit": "Enviar",
+    "sending": "Enviando...",
+    "success": "Hemos recibido su mensaje; le responderemos en breve.",
+    "error": "Algo ha salido mal. Por favor, inténtelo de nuevo.",
+    "infoTitle": "Póngase en contacto",
+    "whatsapp": "WhatsApp",
+    "whatsappMessage": "Hola, ¿podría recibir información?",
+    "followUs": "Síganos",
+    "addressTitle": "Nuestra exposición",
+    "getDirections": "Cómo llegar",
+    "rateLimited": "Ha enviado demasiados mensajes. Por favor, inténtelo más tarde.",
+    "consent": "Al enviar este formulario confirmo que he leído la <link>Política de privacidad</link> y acepto que mis datos personales se traten para responder a mi consulta."
+  },
+  "Error": {
+    "notFoundTitle": "Página no encontrada",
+    "notFoundText": "Es posible que la página que busca se haya movido o que nunca haya existido. Descubra en su lugar nuestras colecciones.",
+    "backHome": "Volver al inicio",
+    "errorTitle": "Algo ha salido mal",
+    "errorText": "Se ha producido un error inesperado. Por favor, inténtelo de nuevo.",
+    "errorCode": "Código de error: {code}",
+    "retry": "Reintentar"
+  },
+  "Privacy": {
+    "title": "Política de privacidad",
+    "lastUpdated": "Última actualización: {date}",
+    "intro": "En {brandName} nos tomamos en serio la protección de sus datos personales. Este aviso explica qué datos tratamos, por qué los tratamos y durante cuánto tiempo los conservamos, de conformidad con la Ley turca n.º 6698 de Protección de Datos Personales (KVKK).",
+    "controllerTitle": "1. Responsable del tratamiento",
+    "controllerText": "El responsable del tratamiento es {legalName}. Puede enviar cualquier pregunta o solicitud relativa a este aviso a {email}.",
+    "dataTitle": "2. Datos personales que tratamos",
+    "dataText": "Cuando rellena el formulario de contacto o de presupuesto de nuestro sitio, recibimos su nombre, su dirección de correo electrónico, su número de teléfono (si lo indica) y el contenido de su mensaje. Para evitar el uso indebido del formulario, su dirección IP nunca se guarda en su forma original, sino solo como un hash irreversible.",
+    "purposeTitle": "3. Finalidades del tratamiento",
+    "purposeText": "Sus datos se tratan exclusivamente para responder a su consulta, preparar un presupuesto, gestionar el proceso de pedido y evitar el uso indebido del formulario. No le enviamos correos comerciales sin su consentimiento.",
+    "legalBasisTitle": "4. Base jurídica",
+    "legalBasisText": "El tratamiento se basa en el art. 5/2-c de la KVKK (relación directa con la celebración o ejecución de un contrato) y en el art. 5/2-f (intereses legítimos del responsable del tratamiento).",
+    "sharingTitle": "5. Comunicación de datos",
+    "sharingText": "Sus datos personales nunca se venden a terceros. Solo nuestros proveedores de alojamiento, base de datos y correo electrónico tratan los datos en nuestro nombre y siguiendo nuestras instrucciones, para que el sitio pueda funcionar. Los datos podrán comunicarse a las autoridades competentes cuando la ley lo exija.",
+    "retentionTitle": "6. Plazo de conservación",
+    "retentionText": "Los datos enviados a través del formulario se conservan como máximo 3 años después de resolver su consulta; después se eliminan o se anonimizan.",
+    "cookiesTitle": "7. Cookies",
+    "cookiesText": "Nuestro sitio no utiliza cookies publicitarias ni de seguimiento. Solo se usan cookies estrictamente necesarias, para recordar su idioma y mantener iniciada la sesión del panel de administración.",
+    "rightsTitle": "8. Sus derechos",
+    "rightsText": "De acuerdo con el art. 11 de la KVKK, tiene derecho a saber si se tratan sus datos personales, a solicitar información al respecto, a pedir su rectificación, supresión o destrucción y a oponerse a su tratamiento. Envíe sus solicitudes a {email}; respondemos en un plazo máximo de 30 días."
+  },
+  "Terms": {
+    "title": "Condiciones de uso",
+    "lastUpdated": "Última actualización: {date}",
+    "intro": "Al visitar este sitio, se considera que acepta las condiciones que figuran a continuación. Si no las acepta, le rogamos que no utilice el sitio.",
+    "scopeTitle": "1. Alcance del sitio",
+    "scopeText": "El sitio web de {brandName} es un catálogo de productos; a través de él no se realizan ventas directas ni se aceptan pagos en línea. Las consultas sobre productos se envían mediante el formulario de contacto y cada una se estudia de forma individual.",
+    "ipTitle": "2. Propiedad intelectual",
+    "ipText": "Todas las imágenes, diseños, textos y elementos de marca del sitio pertenecen a {legalName}. No pueden copiarse, reproducirse, utilizarse con fines comerciales ni publicarse en otro lugar sin autorización por escrito.",
+    "productTitle": "3. Información sobre los productos",
+    "productText": "Como cada pieza se hace a mano, pueden existir ligeras variaciones en la veta de la madera, el tono del color y las medidas. No se trata de un defecto, sino de una consecuencia natural del trabajo artesanal. Las imágenes del sitio son orientativas.",
+    "priceTitle": "4. Precios y presupuestos",
+    "priceText": "Los precios que aparecen en el sitio son solo informativos y no constituyen una oferta de venta vinculante. El precio vigente, las opciones de materiales y el plazo de fabricación se le confirman en un presupuesto por escrito.",
+    "liabilityTitle": "5. Limitación de responsabilidad",
+    "liabilityText": "Procuramos que la información de este sitio sea exacta y esté actualizada; sin embargo, no nos hacemos responsables de los daños indirectos derivados de erratas o de la falta temporal de disponibilidad del sitio.",
+    "linksTitle": "6. Enlaces externos",
+    "linksText": "El sitio puede contener enlaces de terceros, como nuestras cuentas en redes sociales y un servicio de mapas. {brandName} no se hace responsable del contenido ni de las prácticas de privacidad de dichos sitios.",
+    "changesTitle": "7. Cambios",
+    "changesText": "Estas condiciones pueden actualizarse sin previo aviso. La versión vigente se publica siempre en esta página.",
+    "lawTitle": "8. Legislación aplicable",
+    "lawText": "Estas condiciones se rigen por las leyes de la República de Turquía. Los tribunales y las oficinas de ejecución de la ciudad de {courtCity} son competentes para resolver cualquier controversia.",
+    "contactTitle": "9. Contacto",
+    "contactText": "Para cualquier consulta puede escribirnos a {email}."
+  },
+  "ComingSoon": {
+    "title": "Muy Pronto",
+    "metaTitle": "{brandName} — Muy Pronto",
+    "metaDescription": "Muebles hechos a mano. {brandName} abre muy pronto sus puertas: siga nuestro camino en Instagram.",
+    "instagram": "Síganos en Instagram"
+  }
+}

@@ -1,0 +1,221 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Marka renkleri (public site). Değerler src/config/brand.ts'ten gelir:
+     kök layout'lar onları <html>'e CSS değişkeni olarak koyar
+     (src/lib/brand-theme.ts). */
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-highlight: var(--highlight);
+  --color-highlight-light: var(--highlight-light);
+  --color-surface: var(--surface);
+  --color-surface-warm: var(--surface-warm);
+  --color-ink: var(--ink);
+  --color-hairline: var(--hairline);
+
+  /* Tipografi (public site). Değerler aşağıdaki çalışma zamanı
+     değişkenlerinden gelir; Arap alfabeli sayfada Arapça yazı tipleri öne
+     geçer. Logo her dilde Playfair'dir (src/lib/fonts.ts). */
+  --font-heading: var(--font-heading-stack);
+  --font-body: var(--font-body-stack);
+  --font-logo: var(--font-playfair);
+}
+
+:root {
+  --font-heading-stack: var(--font-playfair);
+  --font-body-stack: var(--font-montserrat);
+}
+
+/* Arap alfabesi (Arapça, Farsça): Latin yazı tiplerinin yedekleri (ör. Times) Arapça harf
+   içerdiğinden Arapça yazı tipi listenin başına alınır; Latin kelimeler
+   de onun Latin harfleriyle yazılır. */
+:root:lang(ar),
+:root:lang(fa) {
+  --font-heading-stack: var(--font-reem-kufi), var(--font-playfair);
+  --font-body-stack: var(--font-plex-arabic), var(--font-montserrat);
+}
+
+/* Harf aralığı Arap alfabesinde harflerin birbirine bağlanmasını bozar;
+   büyük harf dönüşümünün de karşılığı yok. Logo gibi Latin kalan öğeler
+   lang="en" taşır ve bu kuraldan etkilenmez. */
+:lang(ar),
+:lang(fa) {
+  letter-spacing: 0 !important;
+  /* Arapça'da italik yoktur; tarayıcının eğdiği harfler bozuk görünür. */
+  font-style: normal !important;
+}
+
+/* Sitedeki görseller (src/components/site/image-guard.tsx): telefonda
+   uzun basınca çıkan "Fotoğrafı kaydet" menüsü, sürükleme ve seçme kapalı;
+   sayfa yazdırılırken görseller basılmaz. Panel bu kurala girmez. */
+[data-image-guard] img {
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+@media print {
+  [data-image-guard] img {
+    visibility: hidden !important;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburns 20s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-kenburns {
+    animation: none;
+  }
+}
+
+/* Giriş animasyonu — tekrar gelen ziyaretçide <body> başındaki betik
+   data-intro="off" koyar; katman hiç boyanmadan gizlenir. Animasyon
+   bitince de aynı değer konur (src/lib/intro.ts). */
+[data-intro="off"] .intro-overlay {
+  display: none;
+}
+
+/* Animasyon oynarken navbar logosu gizli: uçan harfler tam onun yerine
+   iner ve logonun kendisi olur, iki logo üst üste görünmez. İlk boyamadan
+   itibaren geçerli olsun diye CSS'te.
+
+   Güvenlik ağı: animasyon betiği hiç çalışamazsa (JS kapalı, hata) logo
+   6 sn sonra kendiliğinden görünür, katman da kalkar. */
+html:not([data-intro="off"]):has(.intro-overlay) [data-logo-part] {
+  animation: intro-failsafe-show 0.6s ease 6s both;
+}
+
+html:not([data-intro="off"]) .intro-overlay {
+  animation: intro-failsafe-hide 0.6s ease 6s forwards;
+}
+
+@keyframes intro-failsafe-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes intro-failsafe-hide {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes intro-logo-in {
+  from {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.intro-stage {
+  animation: intro-logo-in 1100ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-overlay {
+    display: none;
+  }
+}

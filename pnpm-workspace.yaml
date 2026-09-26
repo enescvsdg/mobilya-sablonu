@@ -1,0 +1,11 @@
+ignoredBuiltDependencies:
+  - '@google/genai'
+  - esbuild
+  - protobufjs
+  - sharp
+  - unrs-resolver
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - '@prisma/engines'
+  - '@swc/core'
+  - prisma

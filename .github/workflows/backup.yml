@@ -1,0 +1,56 @@
+# Haftalık veritabanı yedeği. Supabase'in ücretsiz planı otomatik yedek
+# almaz; burada ürünler, metinler, talepler ve ayarlar (public şeması) tek
+# dosyaya alınıp 90 gün saklanır. Görseller Supabase deposunda durur, bu
+# yedeğe dahil değildir.
+#
+# Gerekli: depo ayarlarında DATABASE_URL secret'ı (Vercel'deki ile aynı
+# Session pooler adresi). Geri yükleme adımları DEPLOYMENT.md'de.
+name: Veritabanı yedeği
+
+on:
+  schedule:
+    - cron: "43 2 * * 0" # Her pazar 02:43 UTC (05:43 TSİ)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Yedeği al
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          # Şablonun kendisinde ve henüz kurulmamış sitede secret yoktur; iş
+          # hata vermeden atlanır. Kurulumda eklenir (YENI-MUSTERI.md).
+          if [ -z "$DATABASE_URL" ]; then
+            echo "::notice::DATABASE_URL secret'ı tanımlı değil (Settings → Secrets and variables → Actions); yedek alınmadı."
+            echo "SKIP=1" >> "$GITHUB_ENV"
+            exit 0
+          fi
+
+          file="site-$(date -u +%Y-%m-%d).dump"
+          echo "FILE=$file" >> "$GITHUB_ENV"
+          mkdir -p yedek
+
+          # pg_dump sürümü sunucununkinden eski olamaz; runner'daki sürüme
+          # güvenmek yerine güncel Postgres imajı kullanılır.
+          # Giriş denemeleri kısa ömürlü güvenlik kaydıdır, verisi alınmaz.
+          docker run --rm -e DATABASE_URL -e FILE="$file" -v "$PWD/yedek:/yedek" postgres:17 \
+            sh -c 'pg_dump "$DATABASE_URL" --format=custom --schema=public --no-owner --no-privileges \
+                     --exclude-table-data=login_attempts --file="/yedek/$FILE" \
+                   && pg_restore --list "/yedek/$FILE" > /dev/null'
+
+          echo "Yedek: $file ($(du -h "yedek/$file" | cut -f1))"
+
+      - name: Yedeği sakla
+        if: env.SKIP != '1'
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ env.FILE }}
+          path: yedek/${{ env.FILE }}
+          retention-days: 90
+          if-no-files-found: error
